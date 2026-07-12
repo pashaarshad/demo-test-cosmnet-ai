@@ -281,7 +281,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
       <section className="relative bg-[#03090A] pt-16 pb-24 md:pt-24 md:pb-36 lg:pt-32 lg:pb-48 overflow-hidden">
         {/* Glow Effects */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-[#00ADD8] opacity-[0.08] blur-3xl pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-[#E71C84] opacity-[0.07] blur-3xl pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-[#FF5A36] opacity-[0.07] blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
           
@@ -293,7 +293,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 bg-[#0B2B30]/40 border border-[#143B41]/50 rounded-full py-1.5 px-3.5 text-xs text-[#00ADD8] font-bold uppercase tracking-wider"
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#E71C84] animate-pulse" />
+              <Sparkles className="w-3.5 h-3.5 text-[#FF5A36] animate-pulse" />
               <span>Engineering the Future with AI</span>
             </motion.div>
 
@@ -304,10 +304,10 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               className="text-4xl sm:text-5xl md:text-6xl font-display font-black leading-[1.1] tracking-tight"
             >
               Your Data —{" "}
-              <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#00ADD8] to-[#E71C84]">
+              <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#00ADD8] to-[#FF5A36]">
                 Our Intelligent
                 {/* Custom wavy SVG line */}
-                <svg className="absolute left-0 -bottom-1 w-full h-2 text-[#E71C84]" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <svg className="absolute left-0 -bottom-1 w-full h-2 text-[#FF5A36]" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0,5 Q25,0 50,5 T100,5" fill="none" stroke="currentColor" strokeWidth="2" />
                 </svg>
               </span>{" "}
@@ -332,7 +332,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               <button
                 id="hero-project-btn"
                 onClick={() => onRequestCallback("Project Discussion Inquiry")}
-                className="bg-gradient-to-r from-[#E71C84] to-[#00ADD8] hover:from-[#f62693] hover:to-[#11beea] text-white py-4 px-8 rounded-full font-bold hover:shadow-xl hover:shadow-[#e71c84]/20 transition-all flex items-center justify-center gap-2.5 cursor-pointer text-xs uppercase tracking-widest group"
+                className="bg-gradient-to-r from-[#FF5A36] to-[#00ADD8] hover:from-[#FF7352] hover:to-[#11beea] text-white py-4 px-8 rounded-full font-bold hover:shadow-xl hover:shadow-[#FF5A36]/20 transition-all flex items-center justify-center gap-2.5 cursor-pointer text-xs uppercase tracking-widest group"
               >
                 Let's discuss your project
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -365,7 +365,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                 <div className="flex justify-between items-center text-[9px] font-black tracking-widest text-[#00ADD8]">
                   <span>COSMONET ACTIVE LAB</span>
                   <span className="flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#E71C84] animate-ping" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A36] animate-ping" />
                     SYSTEM OK
                   </span>
                 </div>
@@ -375,7 +375,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                     <div className="absolute inset-2 rounded-full border border-[#143B41]/80 flex items-center justify-center" />
                     <div className="absolute inset-6 rounded-full bg-[#0B2B30]/30 border border-[#00ADD8]/20 flex items-center justify-center" />
                     <Cpu className="w-10 h-10 text-[#00ADD8] animate-spin" style={{ animationDuration: '8s' }} />
-                    <span className="absolute top-2 left-6 w-2 h-2 rounded-full bg-[#E71C84] shadow-[0_0_8px_#e71c84] animate-bounce" />
+                    <span className="absolute top-2 left-6 w-2 h-2 rounded-full bg-[#FF5A36] shadow-[0_0_8px_#FF5A36] animate-bounce" />
                     <span className="absolute bottom-6 right-2 w-2 h-2 rounded-full bg-[#00ADD8] shadow-[0_0_8px_#00add8] animate-pulse" />
                   </div>
                   <div>
@@ -387,7 +387,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                 <div className="bg-[#0B2B30]/50 p-3 rounded-2xl border border-[#143B41]/60 space-y-2">
                   <div className="flex justify-between items-center text-[10px]">
                     <span className="text-gray-400">Consultation Slots:</span>
-                    <span className="text-[#E71C84] font-bold">2 Available</span>
+                    <span className="text-[#FF5A36] font-bold">2 Available</span>
                   </div>
                   <button
                     onClick={() => onRequestCallback("Schedule Consultation")}
@@ -402,7 +402,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
             {/* Floating visual widgets */}
             <div className="absolute top-1/3 -left-6 bg-[#0B2B30] border border-[#143B41] p-3 rounded-2xl shadow-xl space-y-1 max-w-[140px] hidden sm:block animate-bounce">
               <div className="flex items-center gap-1.5 text-xs font-semibold text-white">
-                <TrendingUp className="w-3.5 h-3.5 text-[#E71C84]" />
+                <TrendingUp className="w-3.5 h-3.5 text-[#FF5A36]" />
                 <span>Impact Growth</span>
               </div>
               <p className="text-[10px] text-gray-400">AI pipelines optimize workflow up to 40%.</p>
@@ -435,7 +435,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
             
             {/* Left Copy block */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-1.5 text-xs text-[#E71C84] font-extrabold uppercase tracking-widest bg-pink-100/50 px-3 py-1 rounded-full">
+              <div className="inline-flex items-center gap-1.5 text-xs text-[#FF5A36] font-extrabold uppercase tracking-widest bg-[#FF5A36]/10 px-3 py-1 rounded-full">
                 <Users className="w-3.5 h-3.5" />
                 <span>Who We Are</span>
               </div>
@@ -451,7 +451,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               <div className="pt-2">
                 <button
                   onClick={() => onViewChange("careers")}
-                  className="px-6 py-3 bg-slate-900 hover:bg-[#E71C84] hover:text-white text-white rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-all"
+                  className="px-6 py-3 bg-slate-900 hover:bg-[#FF5A36] hover:text-white text-white rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-all"
                 >
                   Join Our Tech Network
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -465,7 +465,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               {/* Stat 1 */}
               <div className="bg-white border border-gray-200/80 rounded-2xl p-5 shadow-md flex flex-col justify-between hover:shadow-lg transition-shadow">
                 <div>
-                  <div className="p-2 rounded-full bg-[#E71C84]/10 text-[#E71C84] w-fit mb-3">
+                  <div className="p-2 rounded-full bg-[#FF5A36]/10 text-[#FF5A36] w-fit mb-3">
                     <Award className="w-5 h-5" />
                   </div>
                   <h4 className="text-3xl font-display font-black text-slate-900">50+</h4>
@@ -554,7 +554,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
             
             {/* Left Column: Vertical Tabs */}
             <div className="lg:col-span-5 space-y-3.5">
-              <p className="text-[10px] text-[#E71C84] uppercase font-black tracking-widest pl-2">
+              <p className="text-[10px] text-[#FF5A36] uppercase font-black tracking-widest pl-2">
                 Select a Tech Capability
               </p>
               {CAPABILITIES.map((cap, idx) => {
@@ -587,11 +587,11 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
 
             {/* Right Column: Interactive Deep-dive Card */}
             <div className="lg:col-span-7 bg-[#051517] border border-[#143B41]/70 rounded-3xl p-6 md:p-8 space-y-6 relative overflow-hidden min-h-[480px] flex flex-col justify-between shadow-2xl">
-              <div className="absolute -top-24 -right-24 w-64 h-64 bg-gradient-to-br from-[#E71C84] to-transparent opacity-[0.04] blur-3xl rounded-full" />
+              <div className="absolute -top-24 -right-24 w-64 h-64 bg-gradient-to-br from-[#FF5A36] to-transparent opacity-[0.04] blur-3xl rounded-full" />
               
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
-                  <span className="px-2.5 py-1 bg-pink-500/10 text-[#E71C84] rounded-full text-[10px] font-black uppercase tracking-wider border border-[#e71c84]/20">
+                  <span className="px-2.5 py-1 bg-[#FF5A36]/10 text-[#FF5A36] rounded-full text-[10px] font-black uppercase tracking-wider border border-[#FF5A36]/20">
                     Capability Details
                   </span>
                 </div>
@@ -647,7 +647,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 space-y-16">
           
           <div className="text-center max-w-2xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-1.5 text-xs text-[#E71C84] font-extrabold uppercase tracking-widest bg-pink-50 px-3 py-1 rounded-full border border-pink-100">
+            <div className="inline-flex items-center gap-1.5 text-xs text-[#FF5A36] font-extrabold uppercase tracking-widest bg-[#FF5A36]/10 px-3 py-1 rounded-full border border-[#FF5A36]/20">
               <Layers className="w-3.5 h-3.5" />
               <span>Our Services</span>
             </div>
@@ -669,7 +669,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                   className="bg-slate-50/70 border border-slate-100 rounded-3xl p-6 flex flex-col justify-between hover:bg-white hover:shadow-xl hover:border-[#00ADD8]/40 transition-all duration-300 group"
                 >
                   <div className="space-y-4">
-                    <div className="p-3 bg-white border border-slate-100 rounded-2xl w-fit text-[#E71C84] shadow-sm group-hover:bg-[#00ADD8] group-hover:text-white transition-colors">
+                    <div className="p-3 bg-white border border-slate-100 rounded-2xl w-fit text-[#FF5A36] shadow-sm group-hover:bg-[#00ADD8] group-hover:text-white transition-colors">
                       <IconComponent className="w-5 h-5" />
                     </div>
                     <h3 className="text-lg font-display font-black text-slate-900 leading-snug">
@@ -683,7 +683,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                   <div className="pt-6">
                     <button
                       onClick={() => onRequestCallback(`Inquiry for ${serv.title}`)}
-                      className="text-xs font-bold uppercase tracking-wider text-[#00ADD8] group-hover:text-[#E71C84] flex items-center gap-1 cursor-pointer transition-colors"
+                      className="text-xs font-bold uppercase tracking-wider text-[#00ADD8] group-hover:text-[#FF5A36] flex items-center gap-1 cursor-pointer transition-colors"
                     >
                       Learn More
                       <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
@@ -728,12 +728,12 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               return (
                 <div
                   key={ind.name}
-                  className="bg-white border border-gray-200 rounded-3xl p-6.5 shadow-md hover:shadow-xl hover:border-[#E71C84]/30 transition-all group relative overflow-hidden"
+                  className="bg-white border border-gray-200 rounded-3xl p-6.5 shadow-md hover:shadow-xl hover:border-[#FF5A36]/30 transition-all group relative overflow-hidden"
                 >
                   <div className="absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-br from-[#00ADD8] to-transparent opacity-[0.03] group-hover:opacity-[0.08] blur-xl rounded-full transition-all" />
                   
                   <div className="flex items-center gap-4.5 mb-4">
-                    <div className="p-3 bg-[#03090A] text-white rounded-2xl w-fit group-hover:bg-[#E71C84] transition-colors shadow-lg shadow-[#03090a]/10">
+                    <div className="p-3 bg-[#03090A] text-white rounded-2xl w-fit group-hover:bg-[#FF5A36] transition-colors shadow-lg shadow-[#03090a]/10">
                       <IconComp className="w-5 h-5" />
                     </div>
                     <h3 className="text-lg font-display font-black text-slate-900">
@@ -750,7 +750,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
           </div>
 
           <div className="bg-slate-900 text-white rounded-[32px] p-8 md:p-10 relative overflow-hidden shadow-2xl max-w-4xl mx-auto">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#E71C84] opacity-5 blur-3xl rounded-full" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF5A36] opacity-5 blur-3xl rounded-full" />
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
               <div className="md:col-span-8 space-y-3">
                 <p className="text-xs text-[#00ADD8] uppercase font-bold tracking-widest">Self-Evolving Tech Ecosystems</p>
@@ -761,7 +761,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               <div className="md:col-span-4 text-left md:text-right">
                 <button
                   onClick={() => onRequestCallback("Ecosystem Discussion & Strategy")}
-                  className="px-6 py-3.5 bg-[#E71C84] hover:bg-[#f62693] text-white rounded-full text-xs font-bold uppercase tracking-wider cursor-pointer inline-flex items-center gap-2 transition-colors"
+                  className="px-6 py-3.5 bg-[#FF5A36] hover:bg-[#FF7352] text-white rounded-full text-xs font-bold uppercase tracking-wider cursor-pointer inline-flex items-center gap-2 transition-colors"
                 >
                   Discuss Your Initiative
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -788,7 +788,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-5 space-y-6">
-              <div className="inline-flex items-center gap-1.5 text-xs text-[#E71C84] font-bold uppercase tracking-wider bg-[#0B2B30]/40 border border-[#143B41]/50 px-3.5 py-1.5 rounded-full">
+              <div className="inline-flex items-center gap-1.5 text-xs text-[#FF5A36] font-bold uppercase tracking-wider bg-[#0B2B30]/40 border border-[#143B41]/50 px-3.5 py-1.5 rounded-full">
                 <Award className="w-3.5 h-3.5 animate-pulse" />
                 <span>Why Choose Cosmetic AI</span>
               </div>
@@ -811,8 +811,8 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               </div>
 
               {/* Feature 2 */}
-              <div className="p-5.5 bg-[#0B2B30]/10 border border-[#143B41]/40 rounded-2xl space-y-3 hover:border-[#E71C84]/55 transition-colors">
-                <h4 className="text-base font-bold text-[#E71C84]">Engineering Excellence</h4>
+              <div className="p-5.5 bg-[#0B2B30]/10 border border-[#143B41]/40 rounded-2xl space-y-3 hover:border-[#FF5A36]/55 transition-colors">
+                <h4 className="text-base font-bold text-[#FF5A36]">Engineering Excellence</h4>
                 <p className="text-xs text-gray-400 leading-relaxed">
                   Our team applies modern software engineering frameworks, agile methodologies, and DevOps pipelines.
                 </p>
@@ -859,7 +859,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                 <p className="text-gray-400 uppercase font-black tracking-widest text-[9px] mb-2 pl-1">We work with:</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div className="flex items-center gap-2.5 p-2 rounded-xl bg-[#0B2B30]/30 border border-[#143B41]/40">
-                    <span className="w-2 h-2 rounded-full bg-[#E71C84]" />
+                    <span className="w-2 h-2 rounded-full bg-[#FF5A36]" />
                     <span className="text-gray-300 font-semibold">Startups building AI products</span>
                   </div>
                   <div className="flex items-center gap-2.5 p-2 rounded-xl bg-[#0B2B30]/30 border border-[#143B41]/40">
@@ -871,7 +871,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                     <span className="text-gray-300 font-semibold">Tech companies scaling digital platforms</span>
                   </div>
                   <div className="flex items-center gap-2.5 p-2 rounded-xl bg-[#0B2B30]/30 border border-[#143B41]/40">
-                    <span className="w-2 h-2 rounded-full bg-[#E71C84]" />
+                    <span className="w-2 h-2 rounded-full bg-[#FF5A36]" />
                     <span className="text-gray-300 font-semibold">Organizations adopting automation</span>
                   </div>
                 </div>
@@ -880,7 +880,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               <div className="pt-2">
                 <button
                   onClick={() => onRequestCallback("Partnership Inquiry")}
-                  className="px-6 py-3.5 bg-[#E71C84] hover:bg-[#f62693] text-white rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-colors"
+                  className="px-6 py-3.5 bg-[#FF5A36] hover:bg-[#FF7352] text-white rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-colors"
                 >
                   Become a Partner
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -919,7 +919,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
           
           <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs text-[#E71C84] font-extrabold uppercase tracking-widest bg-pink-50 px-3 py-1 rounded-full border border-pink-100">
+              <div className="inline-flex items-center gap-1.5 text-xs text-[#FF5A36] font-extrabold uppercase tracking-widest bg-[#FF5A36]/10 px-3 py-1 rounded-full border border-[#FF5A36]/20">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Insights Here!</span>
               </div>
@@ -939,7 +939,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                   onClick={() => setActiveArticleTab(cat)}
                   className={`px-4.5 py-2 rounded-full text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
                     activeArticleTab === cat
-                      ? "bg-[#E71C84] text-white shadow-md shadow-pink-500/10"
+                      ? "bg-[#FF5A36] text-white shadow-md shadow-orange-500/10"
                       : "bg-slate-100 border border-gray-200 text-slate-600 hover:text-slate-900 hover:border-gray-300"
                   }`}
                 >
@@ -970,7 +970,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <span className="absolute top-3 left-3 bg-white/95 backdrop-blur px-2.5 py-1 rounded-full text-[9px] font-bold text-[#E71C84] uppercase tracking-wider border border-gray-200 shadow-sm">
+                    <span className="absolute top-3 left-3 bg-white/95 backdrop-blur px-2.5 py-1 rounded-full text-[9px] font-bold text-[#FF5A36] uppercase tracking-wider border border-gray-200 shadow-sm">
                       {art.category}
                     </span>
                   </div>
@@ -979,7 +979,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                   <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
                       <span className="text-[10px] font-mono text-slate-400 font-bold">{art.date} • {art.readTime}</span>
-                      <h4 className="text-base font-display font-black text-slate-900 leading-snug group-hover:text-[#E71C84] transition-colors">
+                      <h4 className="text-base font-display font-black text-slate-900 leading-snug group-hover:text-[#FF5A36] transition-colors">
                         {art.title}
                       </h4>
                       <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
@@ -1037,15 +1037,15 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             
             {/* Job 1 */}
-            <div className="p-6 bg-[#0B2B30]/20 border border-[#143B41]/50 rounded-2xl flex flex-col justify-between hover:border-[#E71C84] hover:bg-[#0B2B30]/35 transition-all">
+            <div className="p-6 bg-[#0B2B30]/20 border border-[#143B41]/50 rounded-2xl flex flex-col justify-between hover:border-[#FF5A36] hover:bg-[#0B2B30]/35 transition-all">
               <div className="space-y-3">
-                <span className="text-[9px] font-bold text-[#E71C84] uppercase tracking-widest">Remote • Full-time</span>
+                <span className="text-[9px] font-bold text-[#FF5A36] uppercase tracking-widest">Remote • Full-time</span>
                 <h4 className="text-lg font-bold text-white">Senior ML Engineer</h4>
                 <p className="text-xs text-gray-400">Design deep learning models, train architectures, and implement LLM systems.</p>
               </div>
               <button
                 onClick={() => onViewChange("careers")}
-                className="mt-6 w-full py-2.5 bg-[#E71C84] hover:bg-[#f62693] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors cursor-pointer text-center"
+                className="mt-6 w-full py-2.5 bg-[#FF5A36] hover:bg-[#FF7352] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors cursor-pointer text-center"
               >
                 Apply Now
               </button>
@@ -1112,7 +1112,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
             {/* Left side details */}
             <div className="lg:col-span-5 space-y-8">
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-1.5 text-xs text-[#E71C84] font-extrabold uppercase tracking-widest bg-pink-50 px-3 py-1 rounded-full border border-pink-100">
+                <div className="inline-flex items-center gap-1.5 text-xs text-[#FF5A36] font-extrabold uppercase tracking-widest bg-[#FF5A36]/10 px-3 py-1 rounded-full border border-[#FF5A36]/20">
                   <Globe className="w-3.5 h-3.5" />
                   <span>Get in Touch</span>
                 </div>
@@ -1127,7 +1127,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               <div className="space-y-5">
                 {/* Contact Email */}
                 <div className="flex gap-4">
-                  <div className="p-3.5 bg-slate-100 text-[#E71C84] rounded-2xl h-fit shadow-sm">
+                  <div className="p-3.5 bg-slate-100 text-[#FF5A36] rounded-2xl h-fit shadow-sm">
                     <Briefcase className="w-5 h-5" />
                   </div>
                   <div>
@@ -1145,7 +1145,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                   </div>
                   <div>
                     <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Call Our Specialists</p>
-                    <a href="tel:+15559876543" className="text-base font-bold text-slate-900 hover:text-[#E71C84] transition-colors font-mono">
+                    <a href="tel:+15559876543" className="text-base font-bold text-slate-900 hover:text-[#FF5A36] transition-colors font-mono">
                       +1 (555) 987-6543
                     </a>
                   </div>
@@ -1184,7 +1184,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                       value={formName}
                       onChange={(e) => setFormName(e.target.value)}
                       placeholder="Your name"
-                      className="w-full bg-white border border-gray-200 rounded-2xl px-4 py-3.5 text-xs text-slate-800 focus:outline-none focus:border-[#E71C84] transition-colors font-semibold"
+                      className="w-full bg-white border border-gray-200 rounded-2xl px-4 py-3.5 text-xs text-slate-800 focus:outline-none focus:border-[#FF5A36] transition-colors font-semibold"
                     />
                   </div>
                   <div>
@@ -1197,7 +1197,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                       value={formEmail}
                       onChange={(e) => setFormEmail(e.target.value)}
                       placeholder="your@email.com"
-                      className="w-full bg-white border border-gray-200 rounded-2xl px-4 py-3.5 text-xs text-slate-800 focus:outline-none focus:border-[#E71C84] transition-colors font-semibold"
+                      className="w-full bg-white border border-gray-200 rounded-2xl px-4 py-3.5 text-xs text-slate-800 focus:outline-none focus:border-[#FF5A36] transition-colors font-semibold"
                     />
                   </div>
                 </div>
@@ -1211,7 +1211,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                     value={formSubject}
                     onChange={(e) => setFormSubject(e.target.value)}
                     placeholder="Project inquiry"
-                    className="w-full bg-white border border-gray-200 rounded-2xl px-4 py-3.5 text-xs text-slate-800 focus:outline-none focus:border-[#E71C84] transition-colors font-semibold"
+                    className="w-full bg-white border border-gray-200 rounded-2xl px-4 py-3.5 text-xs text-slate-800 focus:outline-none focus:border-[#FF5A36] transition-colors font-semibold"
                   />
                 </div>
 
@@ -1225,14 +1225,14 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                     value={formMessage}
                     onChange={(e) => setFormMessage(e.target.value)}
                     placeholder="Tell us about your project..."
-                    className="w-full bg-white border border-gray-200 rounded-3xl px-4 py-3.5 text-xs text-slate-800 focus:outline-none focus:border-[#E71C84] transition-colors font-semibold resize-none"
+                    className="w-full bg-white border border-gray-200 rounded-3xl px-4 py-3.5 text-xs text-slate-800 focus:outline-none focus:border-[#FF5A36] transition-colors font-semibold resize-none"
                   />
                 </div>
 
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full bg-[#E71C84] hover:bg-[#f62693] text-white py-4 px-6 rounded-full text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-pink-500/10 transition-colors"
+                    className="w-full bg-[#FF5A36] hover:bg-[#FF7352] text-white py-4 px-6 rounded-full text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-orange-500/10 transition-colors"
                   >
                     {formSubmitted ? "Sending details..." : "Schedule a Consultation"}
                     <ArrowRight className="w-3.5 h-3.5" />

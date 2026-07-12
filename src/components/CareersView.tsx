@@ -235,7 +235,7 @@ export default function CareersView() {
               <div className="pt-4 mt-4 border-t border-[#143B41]/30 flex justify-between items-center">
                 <div className="space-y-0.5">
                   <div className="flex items-center gap-1 text-[10px] text-gray-500 font-mono">
-                    <MapPin className="w-3 h-3 text-[#E71C84]" />
+                    <MapPin className="w-3 h-3 text-[#FF5A36]" />
                     {job.location}
                   </div>
                   <p className="text-xs font-bold text-white font-mono">{job.salary.split(" per")[0]}</p>
@@ -246,7 +246,7 @@ export default function CareersView() {
                     e.stopPropagation();
                     setSelectedJob(job);
                   }}
-                  className="p-2.5 rounded-full bg-[#0B2B30] text-[#00ADD8] hover:bg-[#E71C84] hover:text-white transition-all cursor-pointer border border-[#143B41]/50"
+                  className="p-2.5 rounded-full bg-[#0B2B30] text-[#00ADD8] hover:bg-[#FF5A36] hover:text-white transition-all cursor-pointer border border-[#143B41]/50"
                   aria-label="View Job details"
                 >
                   <ArrowRight className="w-4 h-4" />
@@ -346,7 +346,7 @@ export default function CareersView() {
               <button
                 id="apply-job-btn"
                 onClick={() => setApplyModalOpen(true)}
-                className="flex-1 bg-gradient-to-r from-[#E71C84] to-[#00ADD8] text-white py-3 px-6 rounded-full text-xs font-bold uppercase tracking-widest text-center flex justify-center items-center gap-2 cursor-pointer"
+                className="flex-1 bg-gradient-to-r from-[#FF5A36] to-[#00ADD8] text-white py-3 px-6 rounded-full text-xs font-bold uppercase tracking-widest text-center flex justify-center items-center gap-2 cursor-pointer"
               >
                 Quick Apply Now
                 <ArrowRight className="w-4 h-4" />
@@ -386,7 +386,7 @@ export default function CareersView() {
               {isSuccess ? (
                 <div className="text-center py-12 space-y-4">
                   <div className="relative">
-                    <div className="absolute inset-0 bg-[#E71C84] blur-md opacity-25 rounded-full" />
+                    <div className="absolute inset-0 bg-[#FF5A36] blur-md opacity-25 rounded-full" />
                     <CheckCircle className="w-14 h-14 text-[#00ADD8] mx-auto relative z-10 animate-bounce" />
                   </div>
                   <h4 className="text-xl font-display font-black">Application Transmitted!</h4>
@@ -463,7 +463,7 @@ export default function CareersView() {
                           <button
                             type="button"
                             onClick={() => setUploadedFile(null)}
-                            className="p-1 rounded bg-[#03090A] hover:bg-[#143B41] text-gray-400 hover:text-[#E71C84] cursor-pointer"
+                            className="p-1 rounded bg-[#03090A] hover:bg-[#143B41] text-gray-400 hover:text-[#FF5A36] cursor-pointer"
                             aria-label="Remove attached file"
                           >
                             <X className="w-4 h-4" />
@@ -510,7 +510,7 @@ export default function CareersView() {
                     <button
                       type="submit"
                       disabled={!applicantForm.name || !applicantForm.email || !uploadedFile || isUploading}
-                      className="flex-1 bg-[#E71C84] hover:bg-[#f62693] text-white py-3 rounded-full text-xs font-bold uppercase tracking-widest text-center flex justify-center items-center gap-1.5 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                      className="flex-1 bg-[#FF5A36] hover:bg-[#FF7352] text-white py-3 rounded-full text-xs font-bold uppercase tracking-widest text-center flex justify-center items-center gap-1.5 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                     >
                       Submit Application
                     </button>

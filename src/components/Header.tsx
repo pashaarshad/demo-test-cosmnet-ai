@@ -69,7 +69,7 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
             className="h-16 md:h-24 w-auto object-contain" 
             referrerPolicy="no-referrer" 
           />
-          <span className="w-1.5 h-1.5 rounded-full bg-[#E71C84] shadow-[0_0_8px_#e71c84] group-hover:scale-125 transition-transform animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A36] shadow-[0_0_8px_#FF5A36] group-hover:scale-125 transition-transform animate-pulse" />
         </div>
 
         {/* Desktop Navigation */}
@@ -218,7 +218,7 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
           <button
             id="header-cta-btn"
             onClick={onRequestCallback}
-            className="bg-[#E71C84] hover:bg-[#f62693] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 hover:shadow-lg hover:shadow-pink-500/20 transition-all cursor-pointer"
+            className="bg-[#FF5A36] hover:bg-[#FF7352] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 hover:shadow-lg hover:shadow-orange-500/20 transition-all cursor-pointer"
           >
             Contact us
             <ArrowRight className="w-3.5 h-3.5" />
@@ -402,7 +402,7 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
                   setMobileMenuOpen(false);
                   onRequestCallback();
                 }}
-                className="w-full bg-[#E71C84] hover:bg-[#f62693] text-white py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full bg-[#FF5A36] hover:bg-[#FF7352] text-white py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-2 cursor-pointer"
               >
                 Contact us
                 <ArrowRight className="w-4 h-4" />

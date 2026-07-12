@@ -62,7 +62,7 @@ export default function Footer({ onViewChange }: FooterProps) {
                 className="h-12 md:h-16 w-auto object-contain" 
                 referrerPolicy="no-referrer" 
               />
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E71C84] shadow-[0_0_8px_#e71c84] group-hover:scale-125 transition-transform animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A36] shadow-[0_0_8px_#FF5A36] group-hover:scale-125 transition-transform animate-pulse" />
             </div>
             
             <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
@@ -164,7 +164,7 @@ export default function Footer({ onViewChange }: FooterProps) {
 
           {/* Newsletter Input Block */}
           <div className="md:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#E71C84]">Stay Updated</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#FF5A36]">Stay Updated</h4>
             <p className="text-xs text-gray-400 leading-relaxed">
               Stay updated with the latest in AI innovation. Receive strategic blueprints, technical insights, and digital trends.
             </p>
@@ -185,7 +185,7 @@ export default function Footer({ onViewChange }: FooterProps) {
               <button
                 type="submit"
                 disabled={subscribed}
-                className="absolute right-1.5 top-1.5 p-2 bg-[#E71C84] hover:bg-[#f62693] text-white rounded-full transition-colors disabled:bg-transparent disabled:text-[#00ADD8] cursor-pointer"
+                className="absolute right-1.5 top-1.5 p-2 bg-[#FF5A36] hover:bg-[#FF7352] text-white rounded-full transition-colors disabled:bg-transparent disabled:text-[#00ADD8] cursor-pointer"
                 aria-label="Subscribe"
               >
                 <Send className="w-3.5 h-3.5" />

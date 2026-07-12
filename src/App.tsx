@@ -76,7 +76,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#03090A] font-sans antialiased selection:bg-[#E71C84] selection:text-white">
+    <div className="flex flex-col min-h-screen bg-[#03090A] font-sans antialiased selection:bg-[#FF5A36] selection:text-white">
       {/* Sticky global navigation header */}
       <Header
         currentView={currentView}

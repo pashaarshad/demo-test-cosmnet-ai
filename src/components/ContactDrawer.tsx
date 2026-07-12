@@ -107,7 +107,7 @@ export default function ContactDrawer({
             <div className="p-6 border-b border-[#143B41]/40 flex justify-between items-center bg-[#0B2B30]/30">
               <div>
                 <h3 className="text-xl font-display font-black tracking-tight text-white flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#E71C84] animate-pulse"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#FF5A36] animate-pulse"></span>
                   Request a Callback
                 </h3>
                 <p className="text-xs text-gray-400 mt-1 font-semibold">
@@ -134,7 +134,7 @@ export default function ContactDrawer({
                   className="h-full flex flex-col justify-center items-center text-center p-8 space-y-4"
                 >
                   <div className="relative">
-                    <div className="absolute inset-0 bg-[#E71C84] blur-lg opacity-30 rounded-full animate-pulse" />
+                    <div className="absolute inset-0 bg-[#FF5A36] blur-lg opacity-30 rounded-full animate-pulse" />
                     <CheckCircle className="w-16 h-16 text-[#00ADD8] relative z-10" />
                   </div>
                   <h4 className="text-2xl font-display font-black">Success!</h4>
@@ -159,7 +159,7 @@ export default function ContactDrawer({
                   <button
                     id="success-done-btn"
                     onClick={handleReset}
-                    className="mt-6 px-6 py-3 bg-gradient-to-r from-[#E71C84] to-[#00ADD8] text-white font-bold rounded-full hover:shadow-lg transition-shadow text-sm cursor-pointer"
+                    className="mt-6 px-6 py-3 bg-gradient-to-r from-[#FF5A36] to-[#00ADD8] text-white font-bold rounded-full hover:shadow-lg transition-shadow text-sm cursor-pointer"
                   >
                     Close & Return
                   </button>
@@ -332,7 +332,7 @@ export default function ContactDrawer({
                       id="opt-in"
                       type="checkbox"
                       defaultChecked
-                      className="mt-1 accent-[#E71C84] rounded focus:ring-0"
+                      className="mt-1 accent-[#FF5A36] rounded focus:ring-0"
                     />
                     <p className="text-[11px] text-gray-400 leading-snug font-semibold">
                       I agree to receive communications from Cosmetic AI about specialized digital and AI insights.
@@ -344,7 +344,7 @@ export default function ContactDrawer({
                     id="submit-callback-btn"
                     type="submit"
                     disabled={loading}
-                    className="w-full mt-4 bg-gradient-to-r from-[#E71C84] to-[#00ADD8] text-white py-3.5 px-6 rounded-full font-bold hover:shadow-lg hover:shadow-pink-500/15 transition-all text-sm flex justify-center items-center gap-2 cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed"
+                    className="w-full mt-4 bg-gradient-to-r from-[#FF5A36] to-[#00ADD8] text-white py-3.5 px-6 rounded-full font-bold hover:shadow-lg hover:shadow-orange-500/15 transition-all text-sm flex justify-center items-center gap-2 cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed"
                   >
                     {loading ? (
                       <>

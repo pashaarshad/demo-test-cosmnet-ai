@@ -153,7 +153,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
     <div className="relative text-gray-200 overflow-hidden bg-[#03090A] min-h-screen">
       {/* Background Aesthetic Glow Elements */}
       <div className="absolute top-0 left-0 right-0 h-[600px] bg-gradient-to-b from-[#00ADD8]/5 via-transparent to-transparent pointer-events-none" />
-      <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#E71C84]/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#FF5A36]/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute top-[800px] -right-40 w-96 h-96 bg-[#00ADD8]/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Hero Section */}
@@ -163,13 +163,13 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
             
             {/* Hero Left Content */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#E71C84]/10 border border-[#E71C84]/30 text-[#E71C84] text-xs font-mono font-semibold tracking-wider uppercase">
-                <span className="w-2 h-2 rounded-full bg-[#E71C84] animate-ping" />
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#FF5A36]/10 border border-[#FF5A36]/30 text-[#FF5A36] text-xs font-mono font-semibold tracking-wider uppercase">
+                <span className="w-2 h-2 rounded-full bg-[#FF5A36] animate-ping" />
                 Custom Software Development
               </div>
               
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-tight text-white leading-tight">
-                Custom software, built by a team you can <span className="text-[#00ADD8] bg-gradient-to-r from-[#00ADD8] to-[#E71C84] bg-clip-text text-transparent">trust</span>.
+                Custom software, built by a team you can <span className="text-[#00ADD8] bg-gradient-to-r from-[#00ADD8] to-[#FF5A36] bg-clip-text text-transparent">trust</span>.
               </h1>
               
               <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
@@ -179,7 +179,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
                 <button
                   onClick={() => onRequestCallback("Technology Custom Software Consultation")}
-                  className="px-8 py-4 bg-[#E71C84] hover:bg-[#f62693] text-white rounded-full font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(231,28,132,0.3)] hover:shadow-[0_0_25px_rgba(231,28,132,0.5)] flex items-center justify-center gap-2 group cursor-pointer"
+                  className="px-8 py-4 bg-[#FF5A36] hover:bg-[#FF7352] text-white rounded-full font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(255,90,54,0.3)] hover:shadow-[0_0_25px_rgba(255,90,54,0.5)] flex items-center justify-center gap-2 group cursor-pointer"
                 >
                   Book consultation call
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -190,7 +190,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-[#143B41]/40">
                 <div className="space-y-1 text-left">
                   <div className="text-white font-mono text-xs font-extrabold flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#E71C84]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A36]" />
                     NDA-first
                   </div>
                   <p className="text-[11px] text-gray-500">Strict IP Protection</p>
@@ -204,7 +204,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
                 </div>
                 <div className="space-y-1 text-left">
                   <div className="text-white font-mono text-xs font-extrabold flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#E71C84]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A36]" />
                     100% Ownership
                   </div>
                   <p className="text-[11px] text-gray-500">No Hidden Licensing</p>
@@ -223,7 +223,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
             <div className="lg:col-span-5">
               <div className="relative group">
                 {/* Glow behind terminal */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#E71C84] to-[#00ADD8] rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#FF5A36] to-[#00ADD8] rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200" />
                 
                 <div className="relative bg-[#041113]/90 border border-[#143B41]/80 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md">
                   {/* Terminal Header */}
@@ -243,7 +243,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
                   {/* Terminal Stats Widget Row */}
                   <div className="grid grid-cols-3 gap-2 px-4 py-2.5 bg-[#03191C]/50 border-b border-[#143B41]/40 text-[10px] font-mono">
                     <div className="flex items-center gap-1.5 text-gray-400">
-                      <Cpu className="w-3.5 h-3.5 text-[#E71C84]" />
+                      <Cpu className="w-3.5 h-3.5 text-[#FF5A36]" />
                       <span>CPU: <b className="text-white">{cpuUsage}%</b></span>
                     </div>
                     <div className="flex items-center gap-1.5 text-gray-400">
@@ -264,7 +264,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
                         if (log.startsWith("$")) textClass = "text-[#00ADD8] font-bold";
                         else if (log.startsWith("✓")) textClass = "text-[#5FD98A] font-bold";
                         else if (log.startsWith("→")) textClass = "text-gray-300";
-                        else if (log.includes("VERIFIED")) textClass = "text-[#E71C84] font-bold";
+                        else if (log.includes("VERIFIED")) textClass = "text-[#FF5A36] font-bold";
 
                         return (
                           <motion.div
@@ -305,7 +305,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
       }}>
         {/* Glowing backgrounds */}
         <div className="absolute top-1/4 left-10 w-72 h-72 bg-[#00ADD8]/5 rounded-full blur-[80px] pointer-events-none" />
-        <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[#E71C84]/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[#FF5A36]/5 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
           
@@ -315,7 +315,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
               Sustained Sprints
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black text-slate-900 tracking-tight leading-none">
-              What actually happens, <span className="bg-gradient-to-r from-[#00ADD8] to-[#E71C84] bg-clip-text text-transparent">week by week</span>.
+              What actually happens, <span className="bg-gradient-to-r from-[#00ADD8] to-[#FF5A36] bg-clip-text text-transparent">week by week</span>.
             </h2>
             <p className="mt-4 text-sm sm:text-base md:text-lg text-slate-600 font-medium max-w-2xl mx-auto">
               We operate in transparent, hyper-focused weekly cycles. No black box development, no silent periods — just rapid, high-quality, continuous delivery.
@@ -333,7 +333,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
                 onClick={() => setActiveTab(tab)}
                 className={`px-8 py-4 rounded-full font-mono text-xs sm:text-sm font-bold tracking-wider transition-all border cursor-pointer flex items-center gap-2.5 shadow-sm ${
                   activeTab === tab
-                    ? "bg-[#E71C84] border-[#E71C84] text-white shadow-[0_4px_20px_rgba(231,28,132,0.4)] scale-105"
+                    ? "bg-[#FF5A36] border-[#FF5A36] text-white shadow-[0_4px_20px_rgba(255,90,54,0.4)] scale-105"
                     : "bg-white border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-400 hover:shadow-md"
                 }`}
               >
@@ -365,14 +365,14 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
               >
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-b border-slate-100 pb-6">
                   <div>
-                    <span className="text-xs font-mono font-bold text-[#E71C84] tracking-widest block mb-1 uppercase">
+                    <span className="text-xs font-mono font-bold text-[#FF5A36] tracking-widest block mb-1 uppercase">
                       {timelineData[activeTab].tag}
                     </span>
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 font-display tracking-tight">
                       {timelineData[activeTab].title}
                     </h3>
                   </div>
-                  <span className="px-5 py-2 bg-gradient-to-r from-[#00ADD8]/10 to-[#E71C84]/10 border border-[#00ADD8]/20 rounded-full text-slate-800 text-xs sm:text-sm font-mono font-bold flex items-center gap-2">
+                  <span className="px-5 py-2 bg-gradient-to-r from-[#00ADD8]/10 to-[#FF5A36]/10 border border-[#00ADD8]/20 rounded-full text-slate-800 text-xs sm:text-sm font-mono font-bold flex items-center gap-2">
                     <Clock className="w-4 h-4 text-[#00ADD8]" />
                     {timelineData[activeTab].badge}
                   </span>
@@ -380,7 +380,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
 
                 <div className="relative">
                   {/* Connecting Line */}
-                  <div className="absolute top-16 left-8 right-8 h-[2px] bg-gradient-to-r from-[#00ADD8]/30 via-[#E71C84]/30 to-[#00ADD8]/30 hidden lg:block z-0" />
+                  <div className="absolute top-16 left-8 right-8 h-[2px] bg-gradient-to-r from-[#00ADD8]/30 via-[#FF5A36]/30 to-[#00ADD8]/30 hidden lg:block z-0" />
 
                   {/* Steps list */}
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
@@ -412,7 +412,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
 
                       const getStepIcon = (index: number) => {
                         switch (index) {
-                          case 0: return <Layers className="w-5 h-5 text-[#E71C84]" />;
+                          case 0: return <Layers className="w-5 h-5 text-[#FF5A36]" />;
                           case 1: return <Code className="w-5 h-5 text-[#00ADD8]" />;
                           case 2: return <ShieldCheck className="w-5 h-5 text-emerald-500" />;
                           case 3: return <Zap className="w-5 h-5 text-amber-500" />;
@@ -434,7 +434,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
                                 <Clock className="w-3.5 h-3.5" />
                                 {step.week}
                               </span>
-                              <div className="w-8 h-8 rounded-xl bg-slate-50 border border-slate-100 group-hover:bg-[#E71C84]/10 group-hover:border-[#E71C84]/20 flex items-center justify-center transition-all">
+                              <div className="w-8 h-8 rounded-xl bg-slate-50 border border-slate-100 group-hover:bg-[#FF5A36]/10 group-hover:border-[#FF5A36]/20 flex items-center justify-center transition-all">
                                 {getStepIcon(idx)}
                               </div>
                             </div>
@@ -457,7 +457,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
                               <ul className="space-y-1.5">
                                 {deliverables.map((item, dIdx) => (
                                   <li key={dIdx} className="flex items-start gap-1.5 text-xs text-slate-600 font-semibold">
-                                    <Check className="w-3.5 h-3.5 text-[#E71C84] mt-0.5 flex-shrink-0" />
+                                    <Check className="w-3.5 h-3.5 text-[#FF5A36] mt-0.5 flex-shrink-0" />
                                     <span>{item}</span>
                                   </li>
                                 ))}
@@ -470,7 +470,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
                               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                               Active Review
                             </span>
-                            <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-[#E71C84] group-hover:translate-x-1 transition-all" />
+                            <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-[#FF5A36] group-hover:translate-x-1 transition-all" />
                           </div>
                         </div>
                       );
@@ -496,7 +496,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="text-xs font-mono font-bold uppercase tracking-widest text-[#E71C84] mb-2">
+            <div className="text-xs font-mono font-bold uppercase tracking-widest text-[#FF5A36] mb-2">
               THE PROBLEM — AND HOW WE FIX IT
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-black text-white">
@@ -510,7 +510,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
               {/* Problem */}
               <div className="bg-red-950/10 border-l-4 border-red-500/80 border border-[#143B41]/30 rounded-r-xl p-6 relative overflow-hidden">
                 <div className="absolute right-3 top-3 text-[10px] font-mono text-red-500/30 font-bold">RISK / 01</div>
-                <div className="text-[#E71C84] font-mono text-xs font-bold mb-2">PROBLEM</div>
+                <div className="text-[#FF5A36] font-mono text-xs font-bold mb-2">PROBLEM</div>
                 <h3 className="text-base sm:text-lg font-bold text-white mb-2">Timelines slip</h3>
                 <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                   A 3-month project turns into 8 months with vague status reports, zero transparency, and no explanations.
@@ -532,7 +532,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
               {/* Problem */}
               <div className="bg-red-950/10 border-l-4 border-red-500/80 border border-[#143B41]/30 rounded-r-xl p-6 relative overflow-hidden">
                 <div className="absolute right-3 top-3 text-[10px] font-mono text-red-500/30 font-bold">RISK / 02</div>
-                <div className="text-[#E71C84] font-mono text-xs font-bold mb-2">PROBLEM</div>
+                <div className="text-[#FF5A36] font-mono text-xs font-bold mb-2">PROBLEM</div>
                 <h3 className="text-base sm:text-lg font-bold text-white mb-2">You don't own the code</h3>
                 <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                   Confusing contract structures mean you can't migrate repositories or switch developers without paying massive release fines.
@@ -554,7 +554,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
               {/* Problem */}
               <div className="bg-red-950/10 border-l-4 border-red-500/80 border border-[#143B41]/30 rounded-r-xl p-6 relative overflow-hidden">
                 <div className="absolute right-3 top-3 text-[10px] font-mono text-red-500/30 font-bold">RISK / 03</div>
-                <div className="text-[#E71C84] font-mono text-xs font-bold mb-2">PROBLEM</div>
+                <div className="text-[#FF5A36] font-mono text-xs font-bold mb-2">PROBLEM</div>
                 <h3 className="text-base sm:text-lg font-bold text-white mb-2">Support disappears</h3>
                 <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                   The software launches, the core invoice gets paid, and the engineering company stops answering critical bugs or system reports.
@@ -587,7 +587,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="text-xs font-mono font-bold uppercase tracking-widest text-[#E71C84] mb-2">
+            <div className="text-xs font-mono font-bold uppercase tracking-widest text-[#FF5A36] mb-2">
               OUR SERVICES
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-black text-slate-900">
@@ -598,7 +598,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Service 1 */}
             <div className="bg-slate-50 border border-slate-100 hover:border-[#00ADD8] hover:bg-white rounded-2xl p-6 space-y-4 transition-all hover:-translate-y-1 shadow-sm hover:shadow-md">
-              <div className="w-10 h-10 rounded-xl bg-[#E71C84]/10 border border-[#E71C84]/30 text-[#E71C84] flex items-center justify-center font-mono font-black text-sm">
+              <div className="w-10 h-10 rounded-xl bg-[#FF5A36]/10 border border-[#FF5A36]/30 text-[#FF5A36] flex items-center justify-center font-mono font-black text-sm">
                 01
               </div>
               <h3 className="text-base font-bold text-slate-900">Custom Software Development</h3>
@@ -620,7 +620,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
 
             {/* Service 3 */}
             <div className="bg-slate-50 border border-slate-100 hover:border-[#00ADD8] hover:bg-white rounded-2xl p-6 space-y-4 transition-all hover:-translate-y-1 shadow-sm hover:shadow-md">
-              <div className="w-10 h-10 rounded-xl bg-[#E71C84]/10 border border-[#E71C84]/30 text-[#E71C84] flex items-center justify-center font-mono font-black text-sm">
+              <div className="w-10 h-10 rounded-xl bg-[#FF5A36]/10 border border-[#FF5A36]/30 text-[#FF5A36] flex items-center justify-center font-mono font-black text-sm">
                 03
               </div>
               <h3 className="text-base font-bold text-slate-900">Platform &amp; Enterprise Engineering</h3>
@@ -656,7 +656,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="text-xs font-mono font-bold uppercase tracking-widest text-[#E71C84] mb-2">
+            <div className="text-xs font-mono font-bold uppercase tracking-widest text-[#FF5A36] mb-2">
               OUR STACK
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-black text-white">
@@ -686,7 +686,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
             {/* Layer 2: Backend */}
             <div className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
               <div className="md:col-span-3">
-                <span className="text-xs font-mono font-bold text-[#E71C84] block mb-0.5">Backend</span>
+                <span className="text-xs font-mono font-bold text-[#FF5A36] block mb-0.5">Backend</span>
                 <span className="text-[11px] text-gray-500 font-medium">Systems &amp; logic</span>
               </div>
               <div className="md:col-span-9 flex flex-wrap gap-2.5">
@@ -716,7 +716,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
             {/* Layer 4: AI / ML */}
             <div className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
               <div className="md:col-span-3">
-                <span className="text-xs font-mono font-bold text-[#E71C84] block mb-0.5">AI / ML</span>
+                <span className="text-xs font-mono font-bold text-[#FF5A36] block mb-0.5">AI / ML</span>
                 <span className="text-[11px] text-gray-500 font-medium">Intelligent agents</span>
               </div>
               <div className="md:col-span-9 flex flex-wrap gap-2.5">
@@ -763,7 +763,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
             {/* Step 2 */}
             <div className="bg-[#071F22]/30 border border-[#143B41]/50 p-6 rounded-2xl relative space-y-4">
               <div className="flex justify-between items-center">
-                <span className="text-[10px] font-mono font-bold text-[#E71C84] tracking-widest bg-[#E71C84]/10 border border-[#E71C84]/30 px-2 py-0.5 rounded">
+                <span className="text-[10px] font-mono font-bold text-[#FF5A36] tracking-widest bg-[#FF5A36]/10 border border-[#FF5A36]/30 px-2 py-0.5 rounded">
                   WEEK 1
                 </span>
                 <span className="text-gray-500 font-mono font-bold text-xs">02</span>
@@ -791,7 +791,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
             {/* Step 4 */}
             <div className="bg-[#071F22]/30 border border-[#143B41]/50 p-6 rounded-2xl relative space-y-4">
               <div className="flex justify-between items-center">
-                <span className="text-[10px] font-mono font-bold text-[#E71C84] tracking-widest bg-[#E71C84]/10 border border-[#E71C84]/30 px-2 py-0.5 rounded">
+                <span className="text-[10px] font-mono font-bold text-[#FF5A36] tracking-widest bg-[#FF5A36]/10 border border-[#FF5A36]/30 px-2 py-0.5 rounded">
                   LAUNCH
                 </span>
                 <span className="text-gray-500 font-mono font-bold text-xs">04</span>
@@ -818,7 +818,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="text-xs font-mono font-bold uppercase tracking-widest text-[#E71C84] mb-2">
+            <div className="text-xs font-mono font-bold uppercase tracking-widest text-[#FF5A36] mb-2">
               WHY COSMETIC AI
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-black text-slate-900">
@@ -894,7 +894,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {/* Stat 1 */}
             <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-md">
-              <div className="text-3xl sm:text-4xl font-display font-extrabold bg-gradient-to-r from-[#00ADD8] to-[#E71C84] bg-clip-text text-transparent">
+              <div className="text-3xl sm:text-4xl font-display font-extrabold bg-gradient-to-r from-[#00ADD8] to-[#FF5A36] bg-clip-text text-transparent">
                 40%
               </div>
               <div className="text-xs font-bold uppercase tracking-widest text-[#00ADD8]">
@@ -907,10 +907,10 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
 
             {/* Stat 2 */}
             <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-md">
-              <div className="text-3xl sm:text-4xl font-display font-extrabold bg-gradient-to-r from-[#E71C84] to-[#00ADD8] bg-clip-text text-transparent">
+              <div className="text-3xl sm:text-4xl font-display font-extrabold bg-gradient-to-r from-[#FF5A36] to-[#00ADD8] bg-clip-text text-transparent">
                 ₹12L
               </div>
-              <div className="text-xs font-bold uppercase tracking-widest text-[#E71C84]">
+              <div className="text-xs font-bold uppercase tracking-widest text-[#FF5A36]">
                 Saved in Dev Costs
               </div>
               <div className="text-[11px] text-slate-500 font-mono">
@@ -920,7 +920,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
 
             {/* Stat 3 */}
             <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-md">
-              <div className="text-3xl sm:text-4xl font-display font-extrabold bg-gradient-to-r from-[#00ADD8] to-[#E71C84] bg-clip-text text-transparent">
+              <div className="text-3xl sm:text-4xl font-display font-extrabold bg-gradient-to-r from-[#00ADD8] to-[#FF5A36] bg-clip-text text-transparent">
                 3x
               </div>
               <div className="text-xs font-bold uppercase tracking-widest text-[#00ADD8]">
@@ -936,7 +936,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
           <div className="mt-8 bg-white border border-dashed border-[#00ADD8]/40 rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 shadow-sm">
             <div className="space-y-3 max-w-xl text-left">
               <h3 className="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
-                <MessageSquare className="w-5 h-5 text-[#E71C84]" />
+                <MessageSquare className="w-5 h-5 text-[#FF5A36]" />
                 Add a client story here
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -963,7 +963,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
         <div className="max-w-4xl mx-auto px-4 md:px-8">
           
           <div className="text-center mb-16">
-            <div className="text-xs font-mono font-bold uppercase tracking-widest text-[#E71C84] mb-2">
+            <div className="text-xs font-mono font-bold uppercase tracking-widest text-[#FF5A36] mb-2">
               FAQS
             </div>
             <h2 className="text-2xl sm:text-3xl font-display font-black text-white">
@@ -984,10 +984,10 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
                     className="w-full p-5 text-left flex justify-between items-center gap-4 text-white hover:text-[#00ADD8] transition-colors focus:outline-none cursor-pointer"
                   >
                     <span className="font-bold text-sm sm:text-base flex gap-3">
-                      <span className="text-[#E71C84] font-mono">Q.</span>
+                      <span className="text-[#FF5A36] font-mono">Q.</span>
                       {faq.q}
                     </span>
-                    <span className={`text-xl transition-transform duration-250 ${isOpen ? "rotate-45 text-[#E71C84]" : "text-[#00ADD8]"}`}>
+                    <span className={`text-xl transition-transform duration-250 ${isOpen ? "rotate-45 text-[#FF5A36]" : "text-[#00ADD8]"}`}>
                       +
                     </span>
                   </button>
@@ -1015,7 +1015,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
 
       {/* FINAL CTA Section */}
       <section className="py-24 border-t border-[#143B41]/30 relative overflow-hidden bg-gradient-to-b from-[#03090A] to-[#041215]">
-        <div className="absolute inset-0 bg-[#E71C84]/5 blur-[120px] rounded-full -bottom-40 pointer-events-none" />
+        <div className="absolute inset-0 bg-[#FF5A36]/5 blur-[120px] rounded-full -bottom-40 pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6 relative z-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-white tracking-tight leading-tight">
             Let's talk about your project.
@@ -1026,7 +1026,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
           <div className="pt-4">
             <button
               onClick={() => onRequestCallback("Custom Software consultation call")}
-              className="px-10 py-4.5 bg-[#E71C84] hover:bg-[#f62693] text-white rounded-full font-bold text-sm tracking-wider transition-all shadow-[0_0_25px_rgba(231,28,132,0.4)] hover:shadow-[0_0_35px_rgba(231,28,132,0.6)] cursor-pointer"
+              className="px-10 py-4.5 bg-[#FF5A36] hover:bg-[#FF7352] text-white rounded-full font-bold text-sm tracking-wider transition-all shadow-[0_0_25px_rgba(255,90,54,0.4)] hover:shadow-[0_0_35px_rgba(255,90,54,0.6)] cursor-pointer"
             >
               Book consultation call
             </button>
