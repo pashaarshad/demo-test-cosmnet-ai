@@ -111,7 +111,7 @@ export default function ContactDrawer({
                   Request a Callback
                 </h3>
                 <p className="text-xs text-gray-400 mt-1 font-semibold">
-                  Connect with a Cosmonet AI Technology Consultant globally
+                  Connect with a Cosmetic AI Technology Consultant globally
                 </p>
               </div>
               <button
@@ -139,7 +139,7 @@ export default function ContactDrawer({
                   </div>
                   <h4 className="text-2xl font-display font-black">Success!</h4>
                   <p className="text-sm text-gray-300 max-w-sm">
-                    Thank you for reaching out. A specialized Cosmonet AI Consultant in our{" "}
+                    Thank you for reaching out. A specialized Cosmetic AI Consultant in our{" "}
                     <span className="text-[#00ADD8] font-bold">{formData.location}</span> node
                     will contact you within the next 2 working hours.
                   </p>
@@ -269,7 +269,7 @@ export default function ContactDrawer({
                       className={`w-full bg-[#0B2B30]/40 border ${
                         errors.companyName ? "border-red-500" : "border-[#143B41]/60 hover:border-gray-500"
                         } focus:border-[#00ADD8] rounded-xl px-4 py-3 text-sm focus:outline-none transition-colors text-white font-semibold`}
-                      placeholder="Cosmonet Active Labs"
+                      placeholder="Cosmetic AI Active Labs"
                     />
                     {errors.companyName && (
                       <p className="text-[10px] text-red-500 mt-1">{errors.companyName}</p>
@@ -335,7 +335,7 @@ export default function ContactDrawer({
                       className="mt-1 accent-[#E71C84] rounded focus:ring-0"
                     />
                     <p className="text-[11px] text-gray-400 leading-snug font-semibold">
-                      I agree to receive communications from Cosmonet AI about specialized digital and AI insights.
+                      I agree to receive communications from Cosmetic AI about specialized digital and AI insights.
                       Your data is handled securely under our global privacy frameworks.
                     </p>
                   </div>

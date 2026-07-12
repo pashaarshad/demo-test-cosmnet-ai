@@ -3,20 +3,60 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomeView from "./components/HomeView";
-import CreateTeamView from "./components/CreateTeamView";
 import CareersView from "./components/CareersView";
+import TechView from "./components/TechView";
 import ContactDrawer from "./components/ContactDrawer";
 import { SelectedRole } from "./types";
 import { motion, AnimatePresence } from "motion/react";
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<"home" | "create-team" | "careers">("home");
+  // Initialize view state based on the current window pathname on page load
+  const [currentView, setCurrentView] = useState<"home" | "careers" | "tech">(() => {
+    const path = window.location.pathname.toLowerCase().replace(/\/$/, "");
+    if (path === "/tech") {
+      return "tech";
+    }
+    if (path === "/careers") {
+      return "careers";
+    }
+    return "home";
+  });
+
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [preconfiguredTeam, setPreconfiguredTeam] = useState<SelectedRole[]>([]);
+
+  // Keep path and browser history in perfect sync when currentView changes
+  const handleViewChange = (view: "home" | "careers" | "tech") => {
+    setCurrentView(view);
+    const targetPath = view === "home" ? "/" : `/${view}`;
+    if (window.location.pathname !== targetPath) {
+      window.history.pushState(null, "", targetPath);
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Synchronize component state if the user navigates via browser Back/Forward buttons
+  useEffect(() => {
+    const handlePopState = () => {
+      const path = window.location.pathname.toLowerCase().replace(/\/$/, "");
+      if (path === "/tech") {
+        setCurrentView("tech");
+      } else if (path === "/careers") {
+        setCurrentView("careers");
+      } else {
+        setCurrentView("home");
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, []);
 
   const handleOpenDrawer = () => {
     setDrawerOpen(true);
@@ -40,10 +80,7 @@ export default function App() {
       {/* Sticky global navigation header */}
       <Header
         currentView={currentView}
-        onViewChange={(view) => {
-          setCurrentView(view);
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
+        onViewChange={handleViewChange}
         onRequestCallback={handleOpenDrawer}
       />
 
@@ -59,24 +96,9 @@ export default function App() {
               transition={{ duration: 0.35, ease: "easeInOut" }}
             >
               <HomeView
-                onViewChange={(view) => {
-                  setCurrentView(view);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
+                onViewChange={handleViewChange}
                 onRequestCallback={handleOpenDrawer}
               />
-            </motion.div>
-          )}
-
-          {currentView === "create-team" && (
-            <motion.div
-              key="create-team"
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -15 }}
-              transition={{ duration: 0.35, ease: "easeInOut" }}
-            >
-              <CreateTeamView onTeamConfigured={handleTeamConfigured} />
             </motion.div>
           )}
 
@@ -91,15 +113,26 @@ export default function App() {
               <CareersView />
             </motion.div>
           )}
+
+          {currentView === "tech" && (
+            <motion.div
+              key="tech"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+            >
+              <TechView
+                onRequestCallback={handleOpenDrawer}
+              />
+            </motion.div>
+          )}
         </AnimatePresence>
       </main>
 
       {/* Persistent global footer */}
       <Footer
-        onViewChange={(view) => {
-          setCurrentView(view);
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
+        onViewChange={handleViewChange}
       />
 
       {/* Slidable right-side inquiry drawer popover */}

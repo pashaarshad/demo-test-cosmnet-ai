@@ -89,7 +89,7 @@ export const JOBS: Job[] = [
     type: "Permanent",
     salary: "$140,000 - $180,000 per annum",
     postedDate: "MAR 15, 2026",
-    companyName: "Cosmonet AI",
+    companyName: "Cosmetic AI",
     description: "We are seeking a Senior Machine Learning Engineer to design and develop AI-powered platforms, implement advanced deep learning models, and orchestrate custom LLM fine-tuning for our enterprise clients.",
     requirements: [
       "5+ years of production experience training, deploying, and monitoring ML models at scale",
@@ -112,8 +112,8 @@ export const JOBS: Job[] = [
     type: "Permanent",
     salary: "$150,000 - $190,000 per annum",
     postedDate: "MAR 08, 2026",
-    companyName: "Cosmonet AI",
-    description: "At Cosmonet AI, we design and deploy applications across AWS, Azure, and GCP. We are looking for a Cloud Solutions Architect to build secure, serverless, and containerized environments for our clients' high-performance AI workloads.",
+    companyName: "Cosmetic AI",
+    description: "At Cosmetic AI, we design and deploy applications across AWS, Azure, and GCP. We are looking for a Cloud Solutions Architect to build secure, serverless, and containerized environments for our clients' high-performance AI workloads.",
     requirements: [
       "Certified Solutions Architect (AWS, GCP, or Azure)",
       "Strong skills in Terraform, Kubernetes, Helm, and docker-compose",
@@ -135,7 +135,7 @@ export const JOBS: Job[] = [
     type: "Permanent",
     salary: "₹1,800,000 - ₹2,400,000 per annum",
     postedDate: "FEB 28, 2026",
-    companyName: "Cosmonet AI",
+    companyName: "Cosmetic AI",
     description: "We are looking for a versatile Full-Stack Developer to build SaaS product development platforms, enterprise-grade APIs, and responsive React frontend applications that elevate user engagement and simplify complex operations.",
     requirements: [
       "3+ years of experience with React, Node.js, TypeScript, and modern state managers",
@@ -177,7 +177,7 @@ export const ARTICLES: Article[] = [
     summary: "A practical guide to designing cloud-native data engineering services, pipelines, and data lakes for real-time big data analytics and robust AI model training workflows.",
     author: {
       name: "Marcus Aurel",
-      role: "Partner, Cosmonet AI Solutions",
+      role: "Partner, Cosmetic AI Solutions",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150"
     }
   },
@@ -200,7 +200,7 @@ export const ARTICLES: Article[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: "test-1",
-    quote: "Cosmonet AI completely transformed how we build digital products. Within weeks of launching our AI initiative, they delivered a highly secure, fine-tuned LLM system that automates up to 60% of our customer queries safely.",
+    quote: "Cosmetic AI completely transformed how we build digital products. Within weeks of launching our AI initiative, they delivered a highly secure, fine-tuned LLM system that automates up to 60% of our customer queries safely.",
     author: "Elena Rostov",
     role: "VP of Engineering",
     company: "StripeHQ",
@@ -209,7 +209,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: "test-2",
-    quote: "The team at Cosmonet AI has deep technical expertise in both cloud migration and artificial intelligence. They built a robust real-time data pipeline on AWS that turns raw telemetry into actionable intelligence within seconds.",
+    quote: "The team at Cosmetic AI has deep technical expertise in both cloud migration and artificial intelligence. They built a robust real-time data pipeline on AWS that turns raw telemetry into actionable intelligence within seconds.",
     author: "David Vance",
     role: "Chief Technology Officer",
     company: "Novus Global",

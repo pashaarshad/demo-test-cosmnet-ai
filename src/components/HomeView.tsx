@@ -37,7 +37,7 @@ import {
 import { ARTICLES, TESTIMONIALS, PARTNERS } from "../data";
 
 interface HomeViewProps {
-  onViewChange: (view: "home" | "create-team" | "careers") => void;
+  onViewChange: (view: "home" | "careers") => void;
   onRequestCallback: (prefilledSubject?: string) => void;
 }
 
@@ -143,7 +143,7 @@ const CAPABILITIES = [
     id: "security-compliance",
     icon: Shield,
     title: "Security & Compliance Engineering",
-    subtitle: "Cosmonet AI ensures Security is embedded into every layer of the technology stack from day one.",
+    subtitle: "Cosmetic AI ensures Security is embedded into every layer of the technology stack from day one.",
     points: [
       "End-to-end resilience across systems and infrastructure",
       "Secure cloud environments with built-in protection layers",
@@ -320,7 +320,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-gray-300 max-w-xl leading-relaxed"
             >
-              At <strong className="text-white font-extrabold">Cosmonet AI</strong>, we design and develop AI-powered platforms, intelligent software products, and enterprise technology solutions that help businesses scale faster and innovate smarter.
+              At <strong className="text-white font-extrabold">Cosmetic AI</strong>, we design and develop AI-powered platforms, intelligent software products, and enterprise technology solutions that help businesses scale faster and innovate smarter.
             </motion.p>
 
             <motion.div
@@ -336,15 +336,6 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               >
                 Let's discuss your project
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-
-              <button
-                id="hero-builder-btn"
-                onClick={() => onViewChange("create-team")}
-                className="bg-[#0B2B30]/60 hover:bg-[#143B41]/80 border border-[#143B41]/50 text-white py-4 px-8 rounded-full font-bold transition-all text-xs uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer hover:border-[#00ADD8]"
-              >
-                Squad Builder
-                <Cpu className="w-4 h-4 text-[#00ADD8]" />
               </button>
             </motion.div>
           </div>
@@ -450,11 +441,11 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               </div>
               
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black leading-tight text-slate-900">
-                Cosmonet AI – Intelligent Technology Solutions for the Next Generation of Digital Enterprises
+                Cosmetic AI – Intelligent Technology Solutions for the Next Generation of Digital Enterprises
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
-                At Cosmonet AI, we design and develop AI-powered platforms, intelligent software products, and enterprise technology solutions that help businesses scale faster and innovate smarter. We understand that true transformation is not just about adopting new tools, but about fundamentally reshaping how businesses operate to drive measurable, long-term outcomes. Our mission is to propel your enterprise forward by delivering bespoke AI solutions that address your most complex challenges while ensuring you remain competitive in an increasingly AI-first global economy.
+                At Cosmetic AI, we design and develop AI-powered platforms, intelligent software products, and enterprise technology solutions that help businesses scale faster and innovate smarter. We understand that true transformation is not just about adopting new tools, but about fundamentally reshaping how businesses operate to drive measurable, long-term outcomes. Our mission is to propel your enterprise forward by delivering bespoke AI solutions that address your most complex challenges while ensuring you remain competitive in an increasingly AI-first global economy.
               </p>
 
               <div className="pt-2">
@@ -542,7 +533,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
       </section>
 
       {/* SECTION 3: CORE TECH STACK & CAPABILITIES - Alternate: Dark Deep Midnight Slate `#03090A` */}
-      <section id="tech-stack" className="relative bg-[#03090A] py-20 md:py-28 overflow-hidden border-b border-[#143B41]/20">
+      <section id="tech-stack" className="relative bg-[#03090A] py-20 md:py-28 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 space-y-16">
           
           <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -629,10 +620,10 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               <div className="pt-6 border-t border-[#143B41]/40 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <span className="text-[10px] font-mono text-gray-500">Node Architecture: Standard secure TLS/REST/RPC API Ready</span>
                 <button
-                  onClick={() => onViewChange("create-team")}
+                  onClick={() => onRequestCallback("Tech Stack & Architecture Consultation")}
                   className="w-full sm:w-auto bg-[#00ADD8] hover:bg-[#11beea] text-[#03090A] font-bold py-3 px-6 rounded-full text-xs uppercase tracking-wider text-center cursor-pointer transition-all flex items-center justify-center gap-2"
                 >
-                  Configure Stack Squad
+                  Discuss Tech Stack
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
@@ -726,7 +717,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               Industries We Serve
             </h2>
             <p className="text-sm sm:text-base text-slate-600">
-              From fintech enterprises leveraging AI for real-time fraud detection, to healthcare providers deploying machine learning for predictive patient outcomes, Cosmonet AI delivers both the strategic vision and advanced technical execution required to succeed.
+              From fintech enterprises leveraging AI for real-time fraud detection, to healthcare providers deploying machine learning for predictive patient outcomes, Cosmetic AI delivers both the strategic vision and advanced technical execution required to succeed.
             </p>
           </div>
 
@@ -769,10 +760,10 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               </div>
               <div className="md:col-span-4 text-left md:text-right">
                 <button
-                  onClick={() => onViewChange("create-team")}
+                  onClick={() => onRequestCallback("Ecosystem Discussion & Strategy")}
                   className="px-6 py-3.5 bg-[#E71C84] hover:bg-[#f62693] text-white rounded-full text-xs font-bold uppercase tracking-wider cursor-pointer inline-flex items-center gap-2 transition-colors"
                 >
-                  Launch Squad Builder
+                  Discuss Your Initiative
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
@@ -799,7 +790,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
             <div className="lg:col-span-5 space-y-6">
               <div className="inline-flex items-center gap-1.5 text-xs text-[#E71C84] font-bold uppercase tracking-wider bg-[#0B2B30]/40 border border-[#143B41]/50 px-3.5 py-1.5 rounded-full">
                 <Award className="w-3.5 h-3.5 animate-pulse" />
-                <span>Why Choose Cosmonet AI</span>
+                <span>Why Choose Cosmetic AI</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-display font-black leading-tight">
                 Technology Expertise That Drives Real Results
@@ -853,7 +844,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-1.5 text-xs text-[#00ADD8] font-bold uppercase tracking-wider bg-[#0B2B30]/40 border border-[#143B41]/50 px-3.5 py-1.5 rounded-full">
                 <Users className="w-3.5 h-3.5" />
-                <span>Partnering with Cosmonet AI</span>
+                <span>Partnering with Cosmetic AI</span>
               </div>
               
               <h3 className="text-2xl sm:text-3xl font-display font-black leading-tight">
@@ -861,7 +852,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               </h3>
               
               <p className="text-sm text-gray-300 max-w-2xl leading-relaxed">
-                Partnering with Cosmonet AI means gaining access to deep technical expertise in Generative AI Development and a collaborative innovation ecosystem.
+                Partnering with Cosmetic AI means gaining access to deep technical expertise in Generative AI Development and a collaborative innovation ecosystem.
               </p>
 
               <div className="space-y-2 text-xs">
@@ -923,7 +914,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
       </section>
 
       {/* SECTION 7: GLOBAL INSIGHTS & BLOG - Alternate: Pure White Background `#FFFFFF` */}
-      <section id="blog" className="relative bg-white text-slate-800 py-20 md:py-28 overflow-hidden border-b border-gray-100">
+      <section id="blog" className="relative bg-white text-slate-800 py-20 md:py-28 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 space-y-12">
           
           <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
@@ -1035,7 +1026,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               <span>Join Our Team</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-display font-black leading-tight text-white">
-              Build the Future with Cosmonet AI
+              Build the Future with Cosmetic AI
             </h2>
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
               We are always looking for curious minds, innovative thinkers, and passionate engineers to join our growing team. Join us and help shape the future of AI-powered technology.
@@ -1129,7 +1120,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                   Contact Us
                 </h2>
                 <p className="text-sm text-slate-600 leading-relaxed max-w-md font-medium">
-                  Ready to transform your business with AI? Let's start a conversation. Have an idea, product vision, or digital transformation initiative? Connect with our experts to explore how Cosmonet AI can help build scalable, AI-powered technology solutions.
+                  Ready to transform your business with AI? Let's start a conversation. Have an idea, product vision, or digital transformation initiative? Connect with our experts to explore how Cosmetic AI can help build scalable, AI-powered technology solutions.
                 </p>
               </div>
 
@@ -1141,8 +1132,8 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                   </div>
                   <div>
                     <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Email Us</p>
-                    <a href="mailto:hello@cosmonet.ai" className="text-base font-bold text-slate-900 hover:text-[#00ADD8] transition-colors">
-                      hello@cosmonet.ai
+                    <a href="mailto:hello@cosmetic.ai" className="text-base font-bold text-slate-900 hover:text-[#00ADD8] transition-colors">
+                      hello@cosmetic.ai
                     </a>
                   </div>
                 </div>

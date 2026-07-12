@@ -4,11 +4,12 @@
  */
 
 import React, { useState } from "react";
-import { OFFICE_LOCATIONS } from "../data";
-import { Send, MapPin, Phone, Github, Linkedin, Twitter } from "lucide-react";
+import { Send, Github, Linkedin, Twitter } from "lucide-react";
+import logoImg from "../assets/images/logo.png";
+import logoTextImg from "../assets/images/logo_text.png";
 
 interface FooterProps {
-  onViewChange: (view: "home" | "create-team" | "careers") => void;
+  onViewChange: (view: "home" | "careers" | "tech") => void;
 }
 
 export default function Footer({ onViewChange }: FooterProps) {
@@ -43,20 +44,29 @@ export default function Footer({ onViewChange }: FooterProps) {
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           {/* Logo & Vision Block */}
-          <div className="md:col-span-5 space-y-4">
+          <div className="md:col-span-4 space-y-4">
             <div
               id="footer-logo"
               onClick={() => onViewChange("home")}
-              className="flex items-center cursor-pointer select-none w-fit group"
+              className="flex items-center gap-2.5 cursor-pointer select-none w-fit group"
             >
-              <span className="text-2xl font-sans font-black tracking-wider text-white group-hover:text-[#00ADD8] transition-colors uppercase">
-                COSMONET AI
-              </span>
-              <span className="w-2.5 h-2.5 rounded-full bg-[#E71C84] ml-1.5 shadow-[0_0_10px_#e71c84]" />
+              <img 
+                src={logoImg} 
+                alt="Cosmetic AI Logo" 
+                className="w-14 h-14 md:w-20 md:h-20 object-contain group-hover:rotate-12 transition-transform duration-500 ease-out" 
+                referrerPolicy="no-referrer" 
+              />
+              <img 
+                src={logoTextImg} 
+                alt="Cosmetic AI" 
+                className="h-12 md:h-16 w-auto object-contain" 
+                referrerPolicy="no-referrer" 
+              />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E71C84] shadow-[0_0_8px_#e71c84] group-hover:scale-125 transition-transform animate-pulse" />
             </div>
             
             <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
-              Cosmonet AI is a technology and artificial intelligence solutions company focused on building AI-driven products, digital platforms, and intelligent automation systems for modern enterprises.
+              Cosmetic AI is a technology and artificial intelligence solutions company focused on building AI-driven products, digital platforms, and intelligent automation systems for modern enterprises.
             </p>
 
             <div className="flex gap-3 pt-2">
@@ -128,17 +138,32 @@ export default function Footer({ onViewChange }: FooterProps) {
               </li>
               <li>
                 <button
-                  onClick={() => onViewChange("create-team")}
+                  onClick={() => onViewChange("careers")}
                   className="hover:text-white hover:underline transition-all text-left text-gray-400 cursor-pointer font-semibold"
                 >
-                  Dedicated Squad Builder
+                  Join Our AI Team
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Landing Pages Column */}
+          <div className="md:col-span-2 space-y-4">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#00ADD8]">Landing Page</h4>
+            <ul className="space-y-2.5 text-sm">
+              <li>
+                <button
+                  onClick={() => onViewChange("tech")}
+                  className="hover:text-white hover:underline transition-all text-left text-gray-400 cursor-pointer font-semibold"
+                >
+                  Tech
                 </button>
               </li>
             </ul>
           </div>
 
           {/* Newsletter Input Block */}
-          <div className="md:col-span-4 space-y-4">
+          <div className="md:col-span-3 space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-widest text-[#E71C84]">Stay Updated</h4>
             <p className="text-xs text-gray-400 leading-relaxed">
               Stay updated with the latest in AI innovation. Receive strategic blueprints, technical insights, and digital trends.
@@ -169,44 +194,10 @@ export default function Footer({ onViewChange }: FooterProps) {
           </div>
         </div>
 
-        {/* Middle Global Office Address Grid */}
-        <div className="pt-10 border-t border-[#143B41]/30 space-y-6">
-          <h4 className="text-xs font-bold uppercase tracking-widest text-[#00ADD8] text-center md:text-left">
-            Our Regional Locations &amp; HQ
-          </h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {OFFICE_LOCATIONS.map((loc) => (
-              <div
-                key={loc.city}
-                className="bg-[#0B2B30]/10 border border-[#143B41]/30 hover:border-[#00ADD8]/50 rounded-2xl p-4 space-y-2.5 transition-all group"
-              >
-                <div className="flex justify-between items-center">
-                  <span className="font-display font-bold text-white group-hover:text-[#00ADD8] transition-colors">
-                    {loc.city}
-                  </span>
-                  <span className="text-sm" title={loc.country}>
-                    {loc.flag}
-                  </span>
-                </div>
-                <div className="space-y-1.5 text-xs text-gray-400 font-semibold">
-                  <div className="flex items-start gap-2">
-                    <MapPin className="w-3.5 h-3.5 mt-0.5 text-[#E71C84] flex-shrink-0" />
-                    <span>{loc.address}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="w-3.5 h-3.5 text-[#00ADD8] flex-shrink-0" />
-                    <span className="font-mono">{loc.phone}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Bottom Legal bar */}
         <div className="pt-8 border-t border-[#143B41]/30 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
           <div>
-            &copy; {new Date().getFullYear()} Cosmonet AI. All rights reserved.
+            &copy; {new Date().getFullYear()} Cosmetic AI. All rights reserved.
           </div>
           <div className="flex gap-4">
             <a href="#privacy" className="hover:text-white hover:underline transition-colors">Privacy Policy</a>

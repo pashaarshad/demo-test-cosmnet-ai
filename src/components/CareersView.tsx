@@ -132,7 +132,7 @@ export default function CareersView() {
         {/* Header Block */}
         <div className="text-center max-w-2xl mx-auto space-y-4">
           <span className="px-3.5 py-1.5 bg-[#00ADD8]/10 text-[#00ADD8] border border-[#00ADD8]/20 rounded-full text-xs font-bold uppercase tracking-wider">
-            Cosmonet AI Careers Center
+            Cosmetic AI Careers Center
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-tight">
             Find Your Next Future
@@ -336,7 +336,7 @@ export default function CareersView() {
             {/* Footer buttons */}
             <div className="p-6 border-t border-[#143B41]/30 bg-[#051517] flex justify-between gap-4">
               <button
-                onClick={() => alert("Job Saved to your Cosmonet AI profile!")}
+                onClick={() => alert("Job Saved to your Cosmetic AI profile!")}
                 className="px-5 py-3 border border-white/20 hover:border-white rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 cursor-pointer text-gray-300 hover:text-white transition-colors"
               >
                 <Bookmark className="w-4 h-4 text-[#00ADD8]" />
