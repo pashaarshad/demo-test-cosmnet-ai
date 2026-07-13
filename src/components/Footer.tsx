@@ -10,9 +10,10 @@ import logoTextImg from "../assets/images/logo_text.png";
 
 interface FooterProps {
   onViewChange: (view: "home" | "careers" | "tech") => void;
+  currentView: "home" | "careers" | "tech";
 }
 
-export default function Footer({ onViewChange }: FooterProps) {
+export default function Footer({ onViewChange, currentView }: FooterProps) {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
@@ -47,7 +48,13 @@ export default function Footer({ onViewChange }: FooterProps) {
           <div className="md:col-span-4 space-y-4">
             <div
               id="footer-logo"
-              onClick={() => onViewChange("home")}
+              onClick={() => {
+                if (currentView === "tech") {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                } else {
+                  onViewChange("home");
+                }
+              }}
               className="flex items-center gap-2.5 cursor-pointer select-none w-fit group"
             >
               <img 

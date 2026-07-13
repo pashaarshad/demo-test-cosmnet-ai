@@ -133,6 +133,7 @@ export default function App() {
       {/* Persistent global footer */}
       <Footer
         onViewChange={handleViewChange}
+        currentView={currentView}
       />
 
       {/* Slidable right-side inquiry drawer popover */}
