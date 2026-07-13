@@ -51,9 +51,14 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
         <div
           id="brand-logo"
           onClick={() => {
-            onViewChange("home");
-            setMobileMenuOpen(false);
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            if (currentView === "tech") {
+              setMobileMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            } else {
+              onViewChange("home");
+              setMobileMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
           }}
           className="flex items-center gap-2 cursor-pointer group select-none"
         >
