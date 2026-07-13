@@ -79,7 +79,6 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
               <button
                 id="tech-nav-home-btn"
                 onClick={() => {
-                  onViewChange("home");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-[#00ADD8] transition-colors"
@@ -253,7 +252,6 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
                   <button
                     id="mob-tech-nav-home"
                     onClick={() => {
-                      onViewChange("home");
                       setMobileMenuOpen(false);
                       window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
