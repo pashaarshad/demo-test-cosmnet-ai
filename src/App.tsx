@@ -17,10 +17,10 @@ export default function App() {
   // Initialize view state based on the current window pathname on page load
   const [currentView, setCurrentView] = useState<"home" | "careers" | "tech">(() => {
     const path = window.location.pathname.toLowerCase().replace(/\/$/, "");
-    if (path === "/tech") {
+    if (path === "/tech" || path === "/tech.html") {
       return "tech";
     }
-    if (path === "/careers") {
+    if (path === "/careers" || path === "/careers.html") {
       return "careers";
     }
     return "home";
@@ -33,7 +33,7 @@ export default function App() {
   const handleViewChange = (view: "home" | "careers" | "tech") => {
     setCurrentView(view);
     const targetPath = view === "home" ? "/" : `/${view}`;
-    if (window.location.pathname !== targetPath) {
+    if (window.location.pathname !== targetPath && window.location.pathname !== `${targetPath}.html`) {
       window.history.pushState(null, "", targetPath);
     }
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -43,9 +43,9 @@ export default function App() {
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname.toLowerCase().replace(/\/$/, "");
-      if (path === "/tech") {
+      if (path === "/tech" || path === "/tech.html") {
         setCurrentView("tech");
-      } else if (path === "/careers") {
+      } else if (path === "/careers" || path === "/careers.html") {
         setCurrentView("careers");
       } else {
         setCurrentView("home");
