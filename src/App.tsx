@@ -9,19 +9,23 @@ import Footer from "./components/Footer";
 import HomeView from "./components/HomeView";
 import CareersView from "./components/CareersView";
 import TechView from "./components/TechView";
+import AiView from "./components/AiView";
 import ContactDrawer from "./components/ContactDrawer";
 import { SelectedRole } from "./types";
 import { motion, AnimatePresence } from "motion/react";
 
 export default function App() {
   // Initialize view state based on the current window pathname on page load
-  const [currentView, setCurrentView] = useState<"home" | "careers" | "tech">(() => {
+  const [currentView, setCurrentView] = useState<"home" | "careers" | "tech" | "ai">(() => {
     const path = window.location.pathname.toLowerCase().replace(/\/$/, "");
     if (path === "/tech" || path === "/tech.html") {
       return "tech";
     }
     if (path === "/careers" || path === "/careers.html") {
       return "careers";
+    }
+    if (path === "/ai" || path === "/ai.html") {
+      return "ai";
     }
     return "home";
   });
@@ -30,7 +34,7 @@ export default function App() {
   const [preconfiguredTeam, setPreconfiguredTeam] = useState<SelectedRole[]>([]);
 
   // Keep path and browser history in perfect sync when currentView changes
-  const handleViewChange = (view: "home" | "careers" | "tech") => {
+  const handleViewChange = (view: "home" | "careers" | "tech" | "ai") => {
     setCurrentView(view);
     const targetPath = view === "home" ? "/" : `/${view}`;
     if (window.location.pathname !== targetPath && window.location.pathname !== `${targetPath}.html`) {
@@ -47,6 +51,8 @@ export default function App() {
         setCurrentView("tech");
       } else if (path === "/careers" || path === "/careers.html") {
         setCurrentView("careers");
+      } else if (path === "/ai" || path === "/ai.html") {
+        setCurrentView("ai");
       } else {
         setCurrentView("home");
       }
@@ -123,6 +129,20 @@ export default function App() {
               transition={{ duration: 0.35, ease: "easeInOut" }}
             >
               <TechView
+                onRequestCallback={handleOpenDrawer}
+              />
+            </motion.div>
+          )}
+
+          {currentView === "ai" && (
+            <motion.div
+              key="ai"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+            >
+              <AiView
                 onRequestCallback={handleOpenDrawer}
               />
             </motion.div>

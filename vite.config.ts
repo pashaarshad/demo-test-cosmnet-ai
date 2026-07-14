@@ -17,6 +17,7 @@ export default defineConfig(() => {
           main: path.resolve(__dirname, 'index.html'),
           tech: path.resolve(__dirname, 'tech.html'),
           careers: path.resolve(__dirname, 'careers.html'),
+          ai: path.resolve(__dirname, 'ai.html'),
         },
       },
     },

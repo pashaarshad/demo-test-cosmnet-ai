@@ -9,8 +9,8 @@ import logoImg from "../assets/images/logo.png";
 import logoTextImg from "../assets/images/logo_text.png";
 
 interface FooterProps {
-  onViewChange: (view: "home" | "careers" | "tech") => void;
-  currentView: "home" | "careers" | "tech";
+  onViewChange: (view: "home" | "careers" | "tech" | "ai") => void;
+  currentView: "home" | "careers" | "tech" | "ai";
 }
 
 export default function Footer({ onViewChange, currentView }: FooterProps) {
@@ -156,14 +156,26 @@ export default function Footer({ onViewChange, currentView }: FooterProps) {
 
           {/* Landing Pages Column */}
           <div className="md:col-span-2 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#00ADD8]">Landing Page</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#00ADD8]">Landing Pages</h4>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <button
                   onClick={() => onViewChange("tech")}
-                  className="hover:text-white hover:underline transition-all text-left text-gray-400 cursor-pointer font-semibold"
+                  className={`hover:text-white hover:underline transition-all text-left cursor-pointer font-semibold ${
+                    currentView === "tech" ? "text-white underline" : "text-gray-400"
+                  }`}
                 >
-                  Tech
+                  Tech Portal
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onViewChange("ai")}
+                  className={`hover:text-white hover:underline transition-all text-left cursor-pointer font-semibold ${
+                    currentView === "ai" ? "text-white underline" : "text-gray-400"
+                  }`}
+                >
+                  AI Automation
                 </button>
               </li>
             </ul>

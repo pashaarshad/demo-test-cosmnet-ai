@@ -10,8 +10,8 @@ import logoImg from "../assets/images/logo.png";
 import logoTextImg from "../assets/images/logo_text.png";
 
 interface HeaderProps {
-  currentView: "home" | "careers" | "tech";
-  onViewChange: (view: "home" | "careers" | "tech") => void;
+  currentView: "home" | "careers" | "tech" | "ai";
+  onViewChange: (view: "home" | "careers" | "tech" | "ai") => void;
   onRequestCallback: () => void;
 }
 
@@ -51,7 +51,7 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
         <div
           id="brand-logo"
           onClick={() => {
-            if (currentView === "tech") {
+            if (currentView === "tech" || currentView === "ai") {
               setMobileMenuOpen(false);
               window.scrollTo({ top: 0, behavior: "smooth" });
             } else {
@@ -138,6 +138,46 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
                 className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-[#00ADD8] transition-colors"
               >
                 FAQs
+              </button>
+            </>
+          ) : currentView === "ai" ? (
+            <>
+              <button
+                id="ai-nav-home-btn"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-[#FF5A36] transition-colors"
+              >
+                Home
+              </button>
+              <button
+                id="ai-nav-integrations-btn"
+                onClick={() => handleTechSectionScroll("integrations")}
+                className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-[#FF5A36] transition-colors"
+              >
+                Integrations
+              </button>
+              <button
+                id="ai-nav-process-btn"
+                onClick={() => handleTechSectionScroll("process")}
+                className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-[#FF5A36] transition-colors"
+              >
+                Process
+              </button>
+              <button
+                id="ai-nav-why-btn"
+                onClick={() => handleTechSectionScroll("why")}
+                className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-[#FF5A36] transition-colors"
+              >
+                Why Us
+              </button>
+              <button
+                id="ai-nav-faq-btn"
+                onClick={() => handleTechSectionScroll("faq")}
+                className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-[#FF5A36] transition-colors"
+              >
+                FAQ
               </button>
             </>
           ) : (
@@ -312,6 +352,59 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
                     className="w-full py-2 px-4 rounded-xl text-left text-xs font-bold uppercase tracking-wider text-gray-300 hover:bg-[#0B2B30]/30"
                   >
                     FAQs
+                  </button>
+                </>
+              ) : currentView === "ai" ? (
+                <>
+                  <button
+                    id="mob-ai-nav-home"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className="w-full py-2 px-4 rounded-xl text-left text-xs font-bold uppercase tracking-wider text-gray-300 hover:bg-[#0B2B30]/30"
+                  >
+                    Home
+                  </button>
+                  <button
+                    id="mob-ai-nav-integrations"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      handleTechSectionScroll("integrations");
+                    }}
+                    className="w-full py-2 px-4 rounded-xl text-left text-xs font-bold uppercase tracking-wider text-gray-300 hover:bg-[#0B2B30]/30"
+                  >
+                    Integrations
+                  </button>
+                  <button
+                    id="mob-ai-nav-process"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      handleTechSectionScroll("process");
+                    }}
+                    className="w-full py-2 px-4 rounded-xl text-left text-xs font-bold uppercase tracking-wider text-gray-300 hover:bg-[#0B2B30]/30"
+                  >
+                    Process
+                  </button>
+                  <button
+                    id="mob-ai-nav-why"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      handleTechSectionScroll("why");
+                    }}
+                    className="w-full py-2 px-4 rounded-xl text-left text-xs font-bold uppercase tracking-wider text-gray-300 hover:bg-[#0B2B30]/30"
+                  >
+                    Why Us
+                  </button>
+                  <button
+                    id="mob-ai-nav-faq"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      handleTechSectionScroll("faq");
+                    }}
+                    className="w-full py-2 px-4 rounded-xl text-left text-xs font-bold uppercase tracking-wider text-gray-300 hover:bg-[#0B2B30]/30"
+                  >
+                    FAQ
                   </button>
                 </>
               ) : (
