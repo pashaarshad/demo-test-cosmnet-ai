@@ -186,6 +186,56 @@ export default function AiView({ onRequestCallback }: AiViewProps) {
     }
   ];
 
+  const getHorizontalKeyframes = (index: number) => {
+    if (index === 0) {
+      return {
+        left: ["-64px", "100%", "100%", "-64px", "-64px"],
+        leadLeft: ["-10px", "100%", "100%", "-10px", "-10px"],
+        opacity: [1, 1, 0, 0, 1],
+        times: [0, 0.33, 0.34, 0.99, 1]
+      };
+    } else if (index === 1) {
+      return {
+        left: ["-64px", "-64px", "100%", "100%", "-64px"],
+        leadLeft: ["-10px", "-10px", "100%", "100%", "-10px"],
+        opacity: [0, 1, 1, 0, 0],
+        times: [0, 0.33, 0.66, 0.67, 1]
+      };
+    } else {
+      return {
+        left: ["-64px", "-64px", "100%", "100%"],
+        leadLeft: ["-10px", "-10px", "100%", "100%"],
+        opacity: [0, 0, 1, 1],
+        times: [0, 0.66, 0.99, 1]
+      };
+    }
+  };
+
+  const getVerticalKeyframes = (index: number) => {
+    if (index === 0) {
+      return {
+        top: ["-40px", "100%", "100%", "-40px", "-40px"],
+        leadTop: ["-10px", "100%", "100%", "-10px", "-10px"],
+        opacity: [1, 1, 0, 0, 1],
+        times: [0, 0.33, 0.34, 0.99, 1]
+      };
+    } else if (index === 1) {
+      return {
+        top: ["-40px", "-40px", "100%", "100%", "-40px"],
+        leadTop: ["-10px", "-10px", "100%", "100%", "-10px"],
+        opacity: [0, 1, 1, 0, 0],
+        times: [0, 0.33, 0.66, 0.67, 1]
+      };
+    } else {
+      return {
+        top: ["-40px", "-40px", "100%", "100%"],
+        leadTop: ["-10px", "-10px", "100%", "100%"],
+        opacity: [0, 0, 1, 1],
+        times: [0, 0.66, 0.99, 1]
+      };
+    }
+  };
+
   return (
     <div className="bg-[#03090A] text-gray-100 min-h-screen relative overflow-hidden font-sans selection:bg-[#FF5A36] selection:text-white">
       {/* Background radial soft ambient glows */}
@@ -450,25 +500,31 @@ export default function AiView({ onRequestCallback }: AiViewProps) {
                                 boxShadow: "0 0 10px #FF5A36, 0 0 15px rgba(255, 90, 54, 0.6)",
                                 height: "3px"
                               }}
-                              initial={{ left: "-64px" }}
-                              animate={{ left: "100%" }}
+                              initial={{ left: "-64px", opacity: idx === 0 ? 1 : 0 }}
+                              animate={{ 
+                                left: getHorizontalKeyframes(idx).left, 
+                                opacity: getHorizontalKeyframes(idx).opacity 
+                              }}
                               transition={{
                                 repeat: Infinity,
-                                duration: 2.0,
-                                ease: "easeInOut",
-                                delay: idx * 0.4
+                                duration: 3.6,
+                                ease: "linear",
+                                times: getHorizontalKeyframes(idx).times
                               }}
                             />
                             {/* Glowing lead point */}
                             <motion.div
                               className="absolute w-2.5 h-2.5 rounded-full bg-[#FF5A36] -translate-y-1/2 top-1/2 shadow-[0_0_8px_#FF5A36]"
-                              initial={{ left: "-10px" }}
-                              animate={{ left: "100%" }}
+                              initial={{ left: "-10px", opacity: idx === 0 ? 1 : 0 }}
+                              animate={{ 
+                                left: getHorizontalKeyframes(idx).leadLeft, 
+                                opacity: getHorizontalKeyframes(idx).opacity 
+                              }}
                               transition={{
                                 repeat: Infinity,
-                                duration: 2.0,
-                                ease: "easeInOut",
-                                delay: idx * 0.4
+                                duration: 3.6,
+                                ease: "linear",
+                                times: getHorizontalKeyframes(idx).times
                               }}
                             />
                             {/* Visible Arrowhead */}
@@ -487,26 +543,32 @@ export default function AiView({ onRequestCallback }: AiViewProps) {
                                   boxShadow: "0 0 10px #FF5A36, 0 0 15px rgba(255, 90, 54, 0.6)",
                                   width: "3px"
                                 }}
-                                initial={{ top: "-40px" }}
-                                animate={{ top: "100%" }}
-                                transition={{
-                                  repeat: Infinity,
-                                  duration: 1.8,
-                                  ease: "easeInOut",
-                                  delay: idx * 0.4
-                                }}
+                                initial={{ top: "-40px", opacity: idx === 0 ? 1 : 0 }}
+                                animate={{ 
+                                  top: getVerticalKeyframes(idx).top, 
+                                  opacity: getVerticalKeyframes(idx).opacity 
+                              }}
+                              transition={{
+                                repeat: Infinity,
+                                duration: 3.6,
+                                ease: "linear",
+                                times: getVerticalKeyframes(idx).times
+                              }}
                               />
                               {/* Glowing lead point */}
                               <motion.div
                                 className="absolute w-2.5 h-2.5 rounded-full bg-[#FF5A36] -translate-x-1/2 left-1/2 shadow-[0_0_8px_#FF5A36]"
-                                initial={{ top: "-10px" }}
-                                animate={{ top: "100%" }}
-                                transition={{
-                                  repeat: Infinity,
-                                  duration: 1.8,
-                                  ease: "easeInOut",
-                                  delay: idx * 0.4
-                                }}
+                                initial={{ top: "-10px", opacity: idx === 0 ? 1 : 0 }}
+                                animate={{ 
+                                  top: getVerticalKeyframes(idx).leadTop, 
+                                  opacity: getVerticalKeyframes(idx).opacity 
+                              }}
+                              transition={{
+                                repeat: Infinity,
+                                duration: 3.6,
+                                ease: "linear",
+                                times: getVerticalKeyframes(idx).times
+                              }}
                               />
                               {/* Arrowhead pointing down */}
                               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10">
