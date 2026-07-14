@@ -143,7 +143,7 @@ const CAPABILITIES = [
     id: "security-compliance",
     icon: Shield,
     title: "Security & Compliance Engineering",
-    subtitle: "Cosmetic AI ensures Security is embedded into every layer of the technology stack from day one.",
+    subtitle: "Cosmonet AI ensures Security is embedded into every layer of the technology stack from day one.",
     points: [
       "End-to-end resilience across systems and infrastructure",
       "Secure cloud environments with built-in protection layers",
@@ -320,7 +320,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-gray-300 max-w-xl leading-relaxed"
             >
-              At <strong className="text-white font-extrabold">Cosmetic AI</strong>, we design and develop AI-powered platforms, intelligent software products, and enterprise technology solutions that help businesses scale faster and innovate smarter.
+              At <strong className="text-white font-extrabold">Cosmonet AI</strong>, we design and develop AI-powered platforms, intelligent software products, and enterprise technology solutions that help businesses scale faster and innovate smarter.
             </motion.p>
 
             <motion.div
@@ -441,11 +441,11 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               </div>
               
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black leading-tight text-slate-900">
-                Cosmetic AI – Intelligent Technology Solutions for the Next Generation of Digital Enterprises
+                Cosmonet AI – Intelligent Technology Solutions for the Next Generation of Digital Enterprises
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
-                At Cosmetic AI, we design and develop AI-powered platforms, intelligent software products, and enterprise technology solutions that help businesses scale faster and innovate smarter. We understand that true transformation is not just about adopting new tools, but about fundamentally reshaping how businesses operate to drive measurable, long-term outcomes. Our mission is to propel your enterprise forward by delivering bespoke AI solutions that address your most complex challenges while ensuring you remain competitive in an increasingly AI-first global economy.
+                At Cosmonet AI, we design and develop AI-powered platforms, intelligent software products, and enterprise technology solutions that help businesses scale faster and innovate smarter. We understand that true transformation is not just about adopting new tools, but about fundamentally reshaping how businesses operate to drive measurable, long-term outcomes. Our mission is to propel your enterprise forward by delivering bespoke AI solutions that address your most complex challenges while ensuring you remain competitive in an increasingly AI-first global economy.
               </p>
 
               <div className="pt-2">
@@ -717,7 +717,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               Industries We Serve
             </h2>
             <p className="text-sm sm:text-base text-slate-600">
-              From fintech enterprises leveraging AI for real-time fraud detection, to healthcare providers deploying machine learning for predictive patient outcomes, Cosmetic AI delivers both the strategic vision and advanced technical execution required to succeed.
+              From fintech enterprises leveraging AI for real-time fraud detection, to healthcare providers deploying machine learning for predictive patient outcomes, Cosmonet AI delivers both the strategic vision and advanced technical execution required to succeed.
             </p>
           </div>
 
@@ -790,7 +790,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
             <div className="lg:col-span-5 space-y-6">
               <div className="inline-flex items-center gap-1.5 text-xs text-[#FF5A36] font-bold uppercase tracking-wider bg-[#0B2B30]/40 border border-[#143B41]/50 px-3.5 py-1.5 rounded-full">
                 <Award className="w-3.5 h-3.5 animate-pulse" />
-                <span>Why Choose Cosmetic AI</span>
+                <span>Why Choose Cosmonet AI</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-display font-black leading-tight">
                 Technology Expertise That Drives Real Results
@@ -844,7 +844,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-1.5 text-xs text-[#00ADD8] font-bold uppercase tracking-wider bg-[#0B2B30]/40 border border-[#143B41]/50 px-3.5 py-1.5 rounded-full">
                 <Users className="w-3.5 h-3.5" />
-                <span>Partnering with Cosmetic AI</span>
+                <span>Partnering with Cosmonet AI</span>
               </div>
               
               <h3 className="text-2xl sm:text-3xl font-display font-black leading-tight">
@@ -852,7 +852,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               </h3>
               
               <p className="text-sm text-gray-300 max-w-2xl leading-relaxed">
-                Partnering with Cosmetic AI means gaining access to deep technical expertise in Generative AI Development and a collaborative innovation ecosystem.
+                Partnering with Cosmonet AI means gaining access to deep technical expertise in Generative AI Development and a collaborative innovation ecosystem.
               </p>
 
               <div className="space-y-2 text-xs">
@@ -1026,7 +1026,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
               <span>Join Our Team</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-display font-black leading-tight text-white">
-              Build the Future with Cosmetic AI
+              Build the Future with Cosmonet AI
             </h2>
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
               We are always looking for curious minds, innovative thinkers, and passionate engineers to join our growing team. Join us and help shape the future of AI-powered technology.
@@ -1120,7 +1120,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                   Contact Us
                 </h2>
                 <p className="text-sm text-slate-600 leading-relaxed max-w-md font-medium">
-                  Ready to transform your business with AI? Let's start a conversation. Have an idea, product vision, or digital transformation initiative? Connect with our experts to explore how Cosmetic AI can help build scalable, AI-powered technology solutions.
+                  Ready to transform your business with AI? Let's start a conversation. Have an idea, product vision, or digital transformation initiative? Connect with our experts to explore how Cosmonet AI can help build scalable, AI-powered technology solutions.
                 </p>
               </div>
 
@@ -1132,8 +1132,8 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                   </div>
                   <div>
                     <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Email Us</p>
-                    <a href="mailto:hello@cosmetic.ai" className="text-base font-bold text-slate-900 hover:text-[#00ADD8] transition-colors">
-                      hello@cosmetic.ai
+                    <a href="mailto:hello@cosmonet.ai" className="text-base font-bold text-slate-900 hover:text-[#00ADD8] transition-colors">
+                      hello@cosmonet.ai
                     </a>
                   </div>
                 </div>

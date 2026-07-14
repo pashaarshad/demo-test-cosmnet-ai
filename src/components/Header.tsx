@@ -64,13 +64,13 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
         >
           <img 
             src={logoImg} 
-            alt="Cosmetic AI Logo" 
+            alt="Cosmonet AI Logo" 
             className="w-12 h-12 md:w-18 md:h-18 object-contain group-hover:rotate-12 transition-transform duration-500 ease-out" 
             referrerPolicy="no-referrer" 
           />
           <img 
             src={logoTextImg} 
-            alt="Cosmetic AI" 
+            alt="Cosmonet AI" 
             className="h-16 md:h-24 w-auto object-contain" 
             referrerPolicy="no-referrer" 
           />

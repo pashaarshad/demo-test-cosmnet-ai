@@ -145,7 +145,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
     },
     {
       q: "Why not just hire freelancers?",
-      a: "With Cosmetic AI, you get a fully synchronized team of senior product engineers, designers, and project leads under a single clear contract, instead of wasting weeks managing independent freelancers."
+      a: "With Cosmonet AI, you get a fully synchronized team of senior product engineers, designers, and project leads under a single clear contract, instead of wasting weeks managing independent freelancers."
     }
   ];
 
@@ -813,13 +813,13 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
         </div>
       </section>
 
-      {/* WHY COSMETIC AI (Comparison Table) */}
+      {/* WHY COSMONET AI (Comparison Table) */}
       <section id="why-us" className="relative py-24 md:py-32 bg-[#EEF7F6] text-slate-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="text-xs font-mono font-bold uppercase tracking-widest text-[#FF5A36] mb-2">
-              WHY COSMETIC AI
+              WHY COSMONET AI
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-black text-slate-900">
               How we're different.
@@ -832,7 +832,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
                 <tr className="border-b border-slate-100">
                   <th className="p-5 font-mono text-xs text-slate-500 uppercase tracking-wider">Features</th>
                   <th className="p-5 font-mono text-xs text-slate-500 uppercase tracking-wider">Typical Dev Shop</th>
-                  <th className="p-5 font-mono text-xs text-[#00ADD8] uppercase tracking-wider bg-[#00ADD8]/5">Cosmetic AI</th>
+                  <th className="p-5 font-mono text-xs text-[#00ADD8] uppercase tracking-wider bg-[#00ADD8]/5">Cosmonet AI</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 font-semibold text-sm">
@@ -940,7 +940,7 @@ export default function TechView({ onRequestCallback }: TechViewProps) {
                 Add a client story here
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                "By partnering with Cosmetic AI, we took our complex custom application code to a fully operational MVP stage in exactly 8 weeks. Their support team remained actively staffed throughout deployment and we owned 100% of our code repositories from week one."
+                "By partnering with Cosmonet AI, we took our complex custom application code to a fully operational MVP stage in exactly 8 weeks. Their support team remained actively staffed throughout deployment and we owned 100% of our code repositories from week one."
               </p>
             </div>
             <span className="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded text-yellow-700 text-[9px] font-mono whitespace-nowrap self-start sm:self-center">

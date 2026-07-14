@@ -59,13 +59,13 @@ export default function Footer({ onViewChange, currentView }: FooterProps) {
             >
               <img 
                 src={logoImg} 
-                alt="Cosmetic AI Logo" 
+                alt="Cosmonet AI Logo" 
                 className="w-14 h-14 md:w-20 md:h-20 object-contain group-hover:rotate-12 transition-transform duration-500 ease-out" 
                 referrerPolicy="no-referrer" 
               />
               <img 
                 src={logoTextImg} 
-                alt="Cosmetic AI" 
+                alt="Cosmonet AI" 
                 className="h-12 md:h-16 w-auto object-contain" 
                 referrerPolicy="no-referrer" 
               />
@@ -73,7 +73,7 @@ export default function Footer({ onViewChange, currentView }: FooterProps) {
             </div>
             
             <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
-              Cosmetic AI is a technology and artificial intelligence solutions company focused on building AI-driven products, digital platforms, and intelligent automation systems for modern enterprises.
+              Cosmonet AI is a technology and artificial intelligence solutions company focused on building AI-driven products, digital platforms, and intelligent automation systems for modern enterprises.
             </p>
 
             <div className="flex gap-3 pt-2">
@@ -204,7 +204,7 @@ export default function Footer({ onViewChange, currentView }: FooterProps) {
         {/* Bottom Legal bar */}
         <div className="pt-8 border-t border-[#143B41]/30 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
           <div>
-            &copy; {new Date().getFullYear()} Cosmetic AI. All rights reserved.
+            &copy; {new Date().getFullYear()} Cosmonet AI. All rights reserved.
           </div>
           <div className="flex gap-4">
             <a href="#privacy" className="hover:text-white hover:underline transition-colors">Privacy Policy</a>

@@ -1,6 +1,6 @@
 {
-  "name": "Cosmetic AI",
-  "description": "An AI-powered platforms, intelligent software products, and enterprise technology solutions portal for Cosmetic AI, featuring custom interactive squad builders, tech stack calibration, and job portals.",
+  "name": "Cosmonet AI",
+  "description": "An AI-powered platforms, intelligent software products, and enterprise technology solutions portal for Cosmonet AI, featuring custom interactive squad builders, tech stack calibration, and job portals.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
