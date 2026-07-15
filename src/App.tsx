@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomeView from "./components/HomeView";
-import CareersView from "./components/CareersView";
+import HrView from "./components/HrView";
 import TechView from "./components/TechView";
 import AiView from "./components/AiView";
 import ContactDrawer from "./components/ContactDrawer";
@@ -16,13 +16,13 @@ import { motion, AnimatePresence } from "motion/react";
 
 export default function App() {
   // Initialize view state based on the current window pathname on page load
-  const [currentView, setCurrentView] = useState<"home" | "careers" | "tech" | "ai">(() => {
+  const [currentView, setCurrentView] = useState<"home" | "hr" | "tech" | "ai">(() => {
     const path = window.location.pathname.toLowerCase().replace(/\/$/, "");
     if (path === "/tech" || path === "/tech.html") {
       return "tech";
     }
-    if (path === "/careers" || path === "/careers.html") {
-      return "careers";
+    if (path === "/hr" || path === "/hr.html") {
+      return "hr";
     }
     if (path === "/ai" || path === "/ai.html") {
       return "ai";
@@ -34,7 +34,7 @@ export default function App() {
   const [preconfiguredTeam, setPreconfiguredTeam] = useState<SelectedRole[]>([]);
 
   // Keep path and browser history in perfect sync when currentView changes
-  const handleViewChange = (view: "home" | "careers" | "tech" | "ai") => {
+  const handleViewChange = (view: "home" | "hr" | "tech" | "ai") => {
     setCurrentView(view);
     const targetPath = view === "home" ? "/" : `/${view}`;
     if (window.location.pathname !== targetPath && window.location.pathname !== `${targetPath}.html`) {
@@ -49,8 +49,8 @@ export default function App() {
       const path = window.location.pathname.toLowerCase().replace(/\/$/, "");
       if (path === "/tech" || path === "/tech.html") {
         setCurrentView("tech");
-      } else if (path === "/careers" || path === "/careers.html") {
-        setCurrentView("careers");
+      } else if (path === "/hr" || path === "/hr.html") {
+        setCurrentView("hr");
       } else if (path === "/ai" || path === "/ai.html") {
         setCurrentView("ai");
       } else {
@@ -108,15 +108,15 @@ export default function App() {
             </motion.div>
           )}
 
-          {currentView === "careers" && (
+          {currentView === "hr" && (
             <motion.div
-              key="careers"
+              key="hr"
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35, ease: "easeInOut" }}
             >
-              <CareersView />
+              <HrView onRequestCallback={handleOpenDrawer} />
             </motion.div>
           )}
 

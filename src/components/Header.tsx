@@ -10,13 +10,14 @@ import logoImg from "../assets/images/logo.png";
 import logoTextImg from "../assets/images/logo_text.png";
 
 interface HeaderProps {
-  currentView: "home" | "careers" | "tech" | "ai";
-  onViewChange: (view: "home" | "careers" | "tech" | "ai") => void;
+  currentView: "home" | "hr" | "tech" | "ai";
+  onViewChange: (view: "home" | "hr" | "tech" | "ai") => void;
   onRequestCallback: () => void;
 }
 
 export default function Header({ currentView, onViewChange, onRequestCallback }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [logoTextError, setLogoTextError] = useState(false);
 
   const handleSectionScroll = (id: string) => {
     setMobileMenuOpen(false);
@@ -51,7 +52,7 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
         <div
           id="brand-logo"
           onClick={() => {
-            if (currentView === "tech" || currentView === "ai") {
+            if (currentView === "tech" || currentView === "ai" || currentView === "hr") {
               setMobileMenuOpen(false);
               window.scrollTo({ top: 0, behavior: "smooth" });
             } else {
@@ -65,15 +66,22 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
           <img 
             src={logoImg} 
             alt="Cosmonet AI Logo" 
-            className="w-12 h-12 md:w-18 md:h-18 object-contain group-hover:rotate-12 transition-transform duration-500 ease-out" 
+            className="w-12 h-12 md:w-16 md:h-16 object-contain group-hover:rotate-12 transition-transform duration-500 ease-out animate-pulse" 
             referrerPolicy="no-referrer" 
           />
-          <img 
-            src={logoTextImg} 
-            alt="Cosmonet AI" 
-            className="h-16 md:h-24 w-auto object-contain" 
-            referrerPolicy="no-referrer" 
-          />
+          {!logoTextError ? (
+            <img 
+              src={logoTextImg} 
+              alt="Cosmonet AI" 
+              onError={() => setLogoTextError(true)}
+              className="h-14 md:h-20 w-auto object-contain" 
+              referrerPolicy="no-referrer" 
+            />
+          ) : (
+            <span className="font-display font-black text-lg md:text-xl tracking-tighter text-white uppercase bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent group-hover:from-[#00ADD8] group-hover:to-[#FF5A36] transition-all duration-300">
+              COSMONET <span className="text-[#FF5A36]">AI</span>
+            </span>
+          )}
           <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A36] shadow-[0_0_8px_#FF5A36] group-hover:scale-125 transition-transform animate-pulse" />
         </div>
 
@@ -180,6 +188,46 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
                 FAQ
               </button>
             </>
+          ) : currentView === "hr" ? (
+            <>
+              <button
+                id="careers-nav-home-btn"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-[#00ADD8] transition-colors"
+              >
+                Home
+              </button>
+              <button
+                id="careers-nav-regions-btn"
+                onClick={() => handleTechSectionScroll("regions")}
+                className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-[#00ADD8] transition-colors"
+              >
+                Talent Pool
+              </button>
+              <button
+                id="careers-nav-process-btn"
+                onClick={() => handleTechSectionScroll("process")}
+                className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-[#00ADD8] transition-colors"
+              >
+                Process
+              </button>
+              <button
+                id="careers-nav-why-btn"
+                onClick={() => handleTechSectionScroll("why")}
+                className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-[#00ADD8] transition-colors"
+              >
+                Why Us
+              </button>
+              <button
+                id="careers-nav-faq-btn"
+                onClick={() => handleTechSectionScroll("faq")}
+                className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-[#00ADD8] transition-colors"
+              >
+                FAQ
+              </button>
+            </>
           ) : (
             <>
               <button
@@ -237,12 +285,12 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
 
               <button
                 id="nav-careers-btn"
-                onClick={() => onViewChange("careers")}
+                onClick={() => onViewChange("hr")}
                 className={`px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider transition-colors ${
-                  currentView === "careers" ? "text-[#00ADD8]" : "text-gray-300 hover:text-white"
+                  (currentView as string) === "hr" ? "text-[#00ADD8]" : "text-gray-300 hover:text-white"
                 }`}
               >
-                Careers
+                HR
               </button>
 
               <button
@@ -407,6 +455,59 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
                     FAQ
                   </button>
                 </>
+              ) : currentView === "hr" ? (
+                <>
+                  <button
+                    id="mob-careers-nav-home"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className="w-full py-2 px-4 rounded-xl text-left text-xs font-bold uppercase tracking-wider text-gray-300 hover:bg-[#0B2B30]/30"
+                  >
+                    Home
+                  </button>
+                  <button
+                    id="mob-careers-nav-regions"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      handleTechSectionScroll("regions");
+                    }}
+                    className="w-full py-2 px-4 rounded-xl text-left text-xs font-bold uppercase tracking-wider text-gray-300 hover:bg-[#0B2B30]/30"
+                  >
+                    Talent Pool
+                  </button>
+                  <button
+                    id="mob-careers-nav-process"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      handleTechSectionScroll("process");
+                    }}
+                    className="w-full py-2 px-4 rounded-xl text-left text-xs font-bold uppercase tracking-wider text-gray-300 hover:bg-[#0B2B30]/30"
+                  >
+                    Process
+                  </button>
+                  <button
+                    id="mob-careers-nav-why"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      handleTechSectionScroll("why");
+                    }}
+                    className="w-full py-2 px-4 rounded-xl text-left text-xs font-bold uppercase tracking-wider text-gray-300 hover:bg-[#0B2B30]/30"
+                  >
+                    Why Us
+                  </button>
+                  <button
+                    id="mob-careers-nav-faq"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      handleTechSectionScroll("faq");
+                    }}
+                    className="w-full py-2 px-4 rounded-xl text-left text-xs font-bold uppercase tracking-wider text-gray-300 hover:bg-[#0B2B30]/30"
+                  >
+                    FAQ
+                  </button>
+                </>
               ) : (
                 <>
                   <button
@@ -468,16 +569,16 @@ export default function Header({ currentView, onViewChange, onRequestCallback }:
                   <button
                     id="mob-nav-careers"
                     onClick={() => {
-                      onViewChange("careers");
+                      onViewChange("hr");
                       setMobileMenuOpen(false);
                     }}
                     className={`w-full py-2 px-4 rounded-xl text-left text-xs font-bold uppercase tracking-wider ${
-                      currentView === "careers"
+                      (currentView as string) === "hr"
                         ? "bg-[#0B2B30]/50 text-[#00ADD8] border-l-4 border-[#00ADD8]"
                         : "text-gray-300 hover:bg-[#0B2B30]/30"
                     }`}
                   >
-                    Careers
+                    HR
                   </button>
 
                   <button

@@ -37,7 +37,7 @@ import {
 import { ARTICLES, TESTIMONIALS, PARTNERS } from "../data";
 
 interface HomeViewProps {
-  onViewChange: (view: "home" | "careers") => void;
+  onViewChange: (view: "home" | "hr" | "tech" | "ai") => void;
   onRequestCallback: (prefilledSubject?: string) => void;
 }
 
@@ -450,7 +450,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
 
               <div className="pt-2">
                 <button
-                  onClick={() => onViewChange("careers")}
+                  onClick={() => onViewChange("hr")}
                   className="px-6 py-3 bg-slate-900 hover:bg-[#FF5A36] hover:text-white text-white rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-all"
                 >
                   Join Our Tech Network
@@ -1044,7 +1044,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                 <p className="text-xs text-gray-400">Design deep learning models, train architectures, and implement LLM systems.</p>
               </div>
               <button
-                onClick={() => onViewChange("careers")}
+                onClick={() => onViewChange("hr")}
                 className="mt-6 w-full py-2.5 bg-[#FF5A36] hover:bg-[#FF7352] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors cursor-pointer text-center"
               >
                 Apply Now
@@ -1059,7 +1059,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                 <p className="text-xs text-gray-400">Deploy high-performance systems across AWS, Azure, and GCP microservices.</p>
               </div>
               <button
-                onClick={() => onViewChange("careers")}
+                onClick={() => onViewChange("hr")}
                 className="mt-6 w-full py-2.5 bg-[#00ADD8] hover:bg-[#11beea] text-[#03090A] text-xs font-bold uppercase tracking-wider rounded-xl transition-colors cursor-pointer text-center"
               >
                 Apply Now
@@ -1074,7 +1074,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
                 <p className="text-xs text-gray-400">Craft interactive interfaces using React and robust backend databases.</p>
               </div>
               <button
-                onClick={() => onViewChange("careers")}
+                onClick={() => onViewChange("hr")}
                 className="mt-6 w-full py-2.5 bg-white hover:bg-gray-100 text-[#03090A] text-xs font-bold uppercase tracking-wider rounded-xl transition-colors cursor-pointer text-center"
               >
                 Apply Now
@@ -1085,7 +1085,7 @@ export default function HomeView({ onViewChange, onRequestCallback }: HomeViewPr
 
           <div className="text-center pt-4">
             <button
-              onClick={() => onViewChange("careers")}
+              onClick={() => onViewChange("hr")}
               className="text-xs font-bold uppercase tracking-widest text-[#00ADD8] hover:text-white transition-colors cursor-pointer inline-flex items-center gap-2"
             >
               View All Open Positions

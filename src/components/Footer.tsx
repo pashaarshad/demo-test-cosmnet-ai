@@ -9,13 +9,14 @@ import logoImg from "../assets/images/logo.png";
 import logoTextImg from "../assets/images/logo_text.png";
 
 interface FooterProps {
-  onViewChange: (view: "home" | "careers" | "tech" | "ai") => void;
-  currentView: "home" | "careers" | "tech" | "ai";
+  onViewChange: (view: "home" | "hr" | "tech" | "ai") => void;
+  currentView: "home" | "hr" | "tech" | "ai";
 }
 
 export default function Footer({ onViewChange, currentView }: FooterProps) {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [logoTextError, setLogoTextError] = useState(false);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -60,15 +61,22 @@ export default function Footer({ onViewChange, currentView }: FooterProps) {
               <img 
                 src={logoImg} 
                 alt="Cosmonet AI Logo" 
-                className="w-14 h-14 md:w-20 md:h-20 object-contain group-hover:rotate-12 transition-transform duration-500 ease-out" 
+                className="w-14 h-14 md:w-16 md:h-16 object-contain group-hover:rotate-12 transition-transform duration-500 ease-out animate-pulse" 
                 referrerPolicy="no-referrer" 
               />
-              <img 
-                src={logoTextImg} 
-                alt="Cosmonet AI" 
-                className="h-12 md:h-16 w-auto object-contain" 
-                referrerPolicy="no-referrer" 
-              />
+              {!logoTextError ? (
+                <img 
+                  src={logoTextImg} 
+                  alt="Cosmonet AI" 
+                  onError={() => setLogoTextError(true)}
+                  className="h-10 md:h-14 w-auto object-contain" 
+                  referrerPolicy="no-referrer" 
+                />
+              ) : (
+                <span className="font-display font-black text-lg md:text-xl tracking-tighter text-white uppercase bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent group-hover:from-[#00ADD8] group-hover:to-[#FF5A36] transition-all duration-300">
+                  COSMONET <span className="text-[#FF5A36]">AI</span>
+                </span>
+              )}
               <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A36] shadow-[0_0_8px_#FF5A36] group-hover:scale-125 transition-transform animate-pulse" />
             </div>
             
@@ -145,7 +153,7 @@ export default function Footer({ onViewChange, currentView }: FooterProps) {
               </li>
               <li>
                 <button
-                  onClick={() => onViewChange("careers")}
+                  onClick={() => onViewChange("hr")}
                   className="hover:text-white hover:underline transition-all text-left text-gray-400 cursor-pointer font-semibold"
                 >
                   Join Our AI Team
@@ -176,6 +184,16 @@ export default function Footer({ onViewChange, currentView }: FooterProps) {
                   }`}
                 >
                   AI Automation
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onViewChange("hr")}
+                  className={`hover:text-white hover:underline transition-all text-left cursor-pointer font-semibold ${
+                    currentView === "hr" ? "text-white underline" : "text-gray-400"
+                  }`}
+                >
+                  HR
                 </button>
               </li>
             </ul>
